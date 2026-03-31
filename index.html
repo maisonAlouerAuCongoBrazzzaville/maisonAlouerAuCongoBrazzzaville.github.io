@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maison à louer au Congo Brazzaville</title>
+<meta name="description" content="Trouvez facilement une maison à louer ou à vendre à Brazzaville et au Congo. Villas, appartements, studios, terrains et biens immobiliers disponibles.">
+<link rel="canonical" href="https://maisonaloueraucongobrazzzaville.github.io/">
+
+<meta property="og:title" content="Maison à louer au Congo Brazzaville">
+<meta property="og:description" content="Découvrez des maisons, villas, appartements et terrains à louer ou à vendre au Congo Brazzaville.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maisonaloueraucongobrazzzaville.github.io/">
+<meta property="og:image" content="https://maisonaloueraucongobrazzzaville.github.io/50.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maison à louer au Congo Brazzaville">
+<meta name="twitter:description" content="Maisons, villas, studios et terrains au Congo Brazzaville.">
+<meta name="twitter:image" content="https://maisonaloueraucongobrazzzaville.github.io/50.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Google tag (gtag.js) -->
@@ -15,7 +28,7 @@
 
   gtag('config', 'G-382PFZZQWE');
 </script>
- <style>
+<style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
@@ -94,13 +107,6 @@
   }
   .nav-links a:hover { color: var(--black); }
   .nav-links a:hover::after { transform: scaleX(1); }
-  .btn-login {
-    background: var(--black); color: var(--white) !important;
-    padding: 10px 26px; border-radius: 50px;
-    font-weight: 500; font-size: .875rem;
-  }
-  .btn-login::after { display: none !important; }
-  .btn-login:hover { background: var(--accent) !important; color: var(--white) !important; }
   .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 101; }
   .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: .3s; }
   .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -125,12 +131,6 @@
   }
   .nav-mobile-menu a:last-child { border-bottom: none; }
   .nav-mobile-menu a:hover { color: var(--accent); }
-  .nav-mobile-menu .btn-login {
-    background: var(--black); color: var(--white) !important;
-    padding: 12px 26px; border-radius: 50px;
-    font-weight: 500; text-align: center; margin-top: 8px;
-  }
-  .nav-mobile-menu .btn-login:hover { background: var(--accent) !important; }
 
   /* ─── HERO ─── */
   .hero {
@@ -374,7 +374,7 @@
   .prop-price small {
     font-family: var(--sans); font-size: .75rem; font-weight: 400; color: var(--gray-500);
   }
-  .prop-name { font-size: .95rem; font-weight: 500; margin-bottom: 8px; }
+  .prop-name { font-size: .95rem; font-weight: 500; margin-bottom: 8px; font-family: var(--sans); line-height: 1.4; }
   .prop-loc { font-size: .8rem; color: var(--gray-500); display: flex; align-items: center; gap: 5px; margin-bottom: 16px; }
   .prop-features {
     display: flex; gap: 16px;
@@ -510,15 +510,24 @@
   }
   .footer-brand .nav-logo { color: white; font-size: 1.5rem; }
   .footer-brand p { font-size: .85rem; color: rgba(255,255,255,.4); font-weight: 300; line-height: 1.7; margin-top: 14px; max-width: 240px; }
-  .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
+  .footer-socials { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
   .social-btn {
-    width: 36px; height: 36px; border-radius: 50%;
+    width: 38px; height: 38px; border-radius: 50%;
     border: 1px solid rgba(255,255,255,.15);
     display: flex; align-items: center; justify-content: center;
-    cursor: pointer; transition: all .2s; text-decoration: none;
-    font-size: .8rem; color: rgba(255,255,255,.5);
+    cursor: pointer; transition: all .25s ease; text-decoration: none;
+    color: rgba(255,255,255,.5);
   }
-  .social-btn:hover { border-color: var(--accent); background: var(--accent); color: white; }
+  .social-btn svg { width: 16px; height: 16px; fill: currentColor; transition: fill .25s; }
+  .social-btn:hover { transform: translateY(-3px); border-color: transparent; }
+  .social-btn.fb:hover  { background: #1877F2; color: white; }
+  .social-btn.ig:hover  { background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; border: none; }
+  .social-btn.wa:hover  { background: #25D366; color: white; }
+  .social-btn.tt:hover  { background: #010101; color: white; }
+  .social-btn.yt:hover  { background: #FF0000; color: white; }
+  .social-btn.li:hover  { background: #0A66C2; color: white; }
+  .social-btn.tw:hover  { background: #000000; color: white; }
+
   .footer-col h4 { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .footer-col ul li a { font-size: .85rem; color: rgba(255,255,255,.5); text-decoration: none; font-weight: 300; transition: color .2s; }
@@ -587,6 +596,169 @@
   }
   .auth-msg.success { background: #e6f9f0; color: #1a7a4a; border: 1px solid #b2ebd0; }
   .auth-msg.error { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+
+  /* ─── CITIES CAROUSEL ─── */
+  .cities-section { padding: 72px 60px; background: var(--white); }
+  .cities-slider-wrap { position: relative; overflow: hidden; }
+  .cities-track {
+    display: flex; gap: 20px;
+    transition: transform .55s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+  }
+  .city-card {
+    flex: 0 0 calc(25% - 15px);
+    border-radius: var(--radius);
+    overflow: hidden; position: relative;
+    text-decoration: none;
+    display: block;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 4px 20px rgba(13,13,13,.06);
+  }
+  .city-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .city-img {
+    width: 100%; height: 200px; object-fit: cover;
+    display: block; transition: transform .5s ease;
+  }
+  .city-card:hover .city-img { transform: scale(1.07); }
+  .city-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 24px 16px 16px;
+    background: linear-gradient(to top, rgba(13,13,13,.85) 0%, transparent 100%);
+  }
+  .city-name {
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 600;
+    color: white; display: block; margin-bottom: 3px;
+  }
+  .city-count { font-size: .72rem; color: var(--accent); font-weight: 500; }
+  /* slider controls */
+  .cities-controls {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; margin-top: 32px;
+  }
+  .cities-arrow {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--white); border: 1.5px solid var(--gray-100);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all .2s ease; flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(13,13,13,.07);
+  }
+  .cities-arrow:hover { background: var(--black); border-color: var(--black); }
+  .cities-arrow:hover svg { fill: white; }
+  .cities-arrow svg { fill: var(--gray-700); width: 18px; height: 18px; transition: fill .2s; }
+  .cities-dots { display: flex; gap: 8px; align-items: center; }
+  .cities-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gray-300); border: none; cursor: pointer;
+    transition: all .3s ease; padding: 0;
+  }
+  .cities-dot.active { background: var(--accent); width: 24px; border-radius: 4px; }
+
+
+  /* ─── BLOG ARTICLES ─── */
+  .blog-section { padding: 80px 60px; background: var(--cream); }
+  .blog-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .blog-card {
+    background: var(--white); border-radius: var(--radius);
+    overflow: hidden; transition: transform .3s, box-shadow .3s;
+    box-shadow: 0 4px 20px rgba(13,13,13,.04);
+  }
+  .blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .blog-img {
+    height: 190px; overflow: hidden;
+    background: var(--gray-100);
+  }
+  .blog-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .5s ease;
+  }
+  .blog-card:hover .blog-img img { transform: scale(1.06); }
+  .blog-body { padding: 24px; }
+  .blog-cat {
+    font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 10px; display: inline-block;
+  }
+  .blog-title {
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 600;
+    line-height: 1.35; color: var(--black); margin-bottom: 10px;
+  }
+  .blog-excerpt { font-size: .83rem; color: var(--gray-500); line-height: 1.65; font-weight: 300; margin-bottom: 18px; }
+  .blog-meta { display: flex; align-items: center; justify-content: space-between; font-size: .75rem; color: var(--gray-500); }
+  .blog-read { color: var(--accent); font-weight: 500; text-decoration: none; font-size: .82rem; transition: gap .2s; display: inline-flex; align-items: center; gap: 5px; }
+  .blog-read:hover { gap: 9px; }
+
+  /* ─── FAQ ─── */
+  .faq-section { padding: 80px 60px; background: var(--white); }
+  .faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    border: 1.5px solid var(--gray-100); border-radius: var(--radius-sm);
+    overflow: hidden; transition: border-color .2s;
+  }
+  .faq-item.open { border-color: var(--accent); }
+  .faq-question {
+    width: 100%; display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 24px; background: none; border: none; cursor: pointer;
+    font-family: var(--sans); font-size: .95rem; font-weight: 500;
+    color: var(--black); text-align: left; gap: 16px;
+  }
+  .faq-question:hover { background: var(--gray-100); }
+  .faq-icon {
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 1.5px solid var(--gray-300); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; color: var(--gray-500);
+    transition: all .25s ease;
+  }
+  .faq-item.open .faq-icon { background: var(--accent); border-color: var(--accent); color: white; transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height .35s ease, padding .35s ease;
+    font-size: .875rem; color: var(--gray-500); line-height: 1.75;
+    padding: 0 24px; font-weight: 300;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 20px; }
+
+  /* ─── SEO CONTENT ─── */
+  .seo-content {
+    padding: 64px 60px;
+    background: var(--cream);
+    border-top: 1px solid var(--gray-100);
+  }
+  .seo-content .container { max-width: 820px; margin: 0 auto; }
+  .seo-content h2 {
+    font-family: var(--serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 600; color: var(--black); margin-bottom: 16px;
+  }
+  .seo-content h3 {
+    font-family: var(--serif); font-size: 1.2rem;
+    font-weight: 600; color: var(--black);
+    margin: 28px 0 10px;
+  }
+  .seo-content p {
+    font-size: .9rem; color: var(--gray-700); line-height: 1.8;
+    font-weight: 300; margin-bottom: 14px;
+  }
+
+  /* ─── RESPONSIVE NEW SECTIONS ─── */
+  @media (max-width: 1100px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    .city-card { flex: 0 0 calc(33.33% - 14px); }
+  }
+  @media (max-width: 900px) {
+    .cities-section { padding: 48px 20px; }
+    .blog-section { padding: 60px 20px; }
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    .faq-section { padding: 60px 20px; }
+    .seo-content { padding: 48px 20px; }
+    .city-card { flex: 0 0 calc(50% - 10px); }
+  }
+  @media (max-width: 600px) {
+    .blog-grid { grid-template-columns: 1fr; }
+    .city-card { flex: 0 0 calc(100% - 0px); }
+  }
 
   /* ─── BACK TO TOP ─── */
   .back-top {
@@ -700,7 +872,6 @@
     <li><a href="#properties">Propriétés</a></li>
     <li><a href="#how">Services</a></li>
     <li><a href="#blog">Blog</a></li>
-    <li><a href="#" class="btn-login" id="openLoginBtn">Connexion</a></li>
   </ul>
   <div class="nav-hamburger" id="hamburger">
     <span></span><span></span><span></span>
@@ -713,7 +884,6 @@
   <a href="#properties" class="mobile-nav-link">Propriétés</a>
   <a href="#how" class="mobile-nav-link">Services</a>
   <a href="#blog" class="mobile-nav-link">Blog</a>
-  <a href="#" class="btn-login open-login mobile-nav-link">Connexion</a>
 </div>
 <section class="hero" id="about">
   <div class="hero-content">
@@ -839,6 +1009,60 @@
   </div>
 </section>
 
+<!-- CITIES CAROUSEL -->
+<section class="cities-section" id="villes">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Zones couvertes</p>
+    <h2 class="section-title">Nous opérons dans vos <strong>villes</strong></h2>
+    <p class="section-sub">De Brazzaville à Pointe-Noire, nos conseillers connaissent chaque quartier pour vous trouver le bien idéal.</p>
+  </div>
+  <div class="cities-slider-wrap">
+    <div class="cities-track" id="citiesTrack">
+      <a href="brazzaville.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=80" alt="Maison à louer Brazzaville" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Brazzaville</span><span class="city-count">Centre-ville · Plateau</span></div>
+      </a>
+      <a href="bacongo.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?w=500&q=80" alt="Location appartement Bacongo" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Bacongo</span><span class="city-count">Brazzaville</span></div>
+      </a>
+      <a href="poto-poto.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1543489816-5d1b4d19c5a8?w=500&q=80" alt="Maison à louer Poto-Poto" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Poto-Poto</span><span class="city-count">Brazzaville</span></div>
+      </a>
+      <a href="makelekele.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=80" alt="Immobilier Makélékélé" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Makélékélé</span><span class="city-count">Brazzaville</span></div>
+      </a>
+      <a href="moungali.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&q=80" alt="Location Moungali Brazzaville" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Moungali</span><span class="city-count">Brazzaville</span></div>
+      </a>
+      <a href="talangai.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&q=80" alt="Maison à vendre Talangaï" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Talangaï</span><span class="city-count">Brazzaville</span></div>
+      </a>
+      <a href="pointe-noire.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80" alt="Immobilier Pointe-Noire Congo" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Pointe-Noire</span><span class="city-count">Congo</span></div>
+      </a>
+      <a href="dolisie.html" class="city-card">
+        <img class="city-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Logement Dolisie Congo" loading="lazy">
+        <div class="city-overlay"><span class="city-name">Dolisie</span><span class="city-count">Congo</span></div>
+      </a>
+    </div>
+  </div>
+  <div class="cities-controls">
+    <button class="cities-arrow" id="citiesPrev" aria-label="Précédent">
+      <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+    </button>
+    <div class="cities-dots" id="citiesDots"></div>
+    <button class="cities-arrow" id="citiesNext" aria-label="Suivant">
+      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+    </button>
+  </div>
+</section>
+
 <!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="section-header reveal">
@@ -870,6 +1094,62 @@
   </div>
 </section>
 
+<!-- BLOG ARTICLES -->
+<section class="blog-section" id="blog-articles">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Conseils immobiliers</p>
+    <h2 class="section-title">Nos derniers <strong>articles</strong></h2>
+    <p class="section-sub">Des guides et conseils pratiques pour réussir votre projet immobilier au Congo Brazzaville.</p>
+  </div>
+  <div class="blog-grid">
+    <!-- Article 1 -->
+    <article class="blog-card reveal">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Comment trouver une maison à louer à Brazzaville" loading="lazy">
+      </div>
+      <div class="blog-body">
+        <span class="blog-cat">Location</span>
+        <h2 class="blog-title">Comment trouver une maison à louer à Brazzaville en 2025</h2>
+        <p class="blog-excerpt">Découvrez les étapes clés pour trouver rapidement un logement adapté à votre budget dans les quartiers de Bacongo, Poto-Poto, Moungali et au-delà.</p>
+        <div class="blog-meta">
+          <span>12 juin 2025</span>
+          <a href="#" class="blog-read">Lire l'article <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </article>
+    <!-- Article 2 -->
+    <article class="blog-card reveal" style="transition-delay:.1s">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80" alt="Investir dans l'immobilier au Congo" loading="lazy">
+      </div>
+      <div class="blog-body">
+        <span class="blog-cat">Investissement</span>
+        <h2 class="blog-title">Investir dans l'immobilier au Congo : ce qu'il faut savoir</h2>
+        <p class="blog-excerpt">Marché en pleine croissance, rentabilité locative et quartiers porteurs à Brazzaville et Pointe-Noire : notre guide complet pour les investisseurs.</p>
+        <div class="blog-meta">
+          <span>3 mai 2025</span>
+          <a href="#" class="blog-read">Lire l'article <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </article>
+    <!-- Article 3 -->
+    <article class="blog-card reveal" style="transition-delay:.2s">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80" alt="Vendre un terrain au Congo Brazzaville" loading="lazy">
+      </div>
+      <div class="blog-body">
+        <span class="blog-cat">Vente</span>
+        <h2 class="blog-title">Vendre un terrain ou une villa au Congo : les démarches légales</h2>
+        <p class="blog-excerpt">Titre foncier, compromis de vente, droits d'enregistrement : toutes les formalités à connaître avant de vendre votre bien immobilier au Congo Brazzaville.</p>
+        <div class="blog-meta">
+          <span>18 avril 2025</span>
+          <a href="#" class="blog-read">Lire l'article <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="blog">
   <div class="section-header reveal" style="margin-bottom:48px">
@@ -890,7 +1170,89 @@
   </div>
   <div class="cta-actions">
     <a href="tel:+242000000" class="btn-primary">Nous appeler</a>
-    <button class="btn-outline open-login">Prendre RDV</button>
+    <a href="tel:+242000000" class="btn-outline">Prendre RDV</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Questions fréquentes</p>
+    <h2 class="section-title">Tout ce que vous <strong>devez savoir</strong></h2>
+    <p class="section-sub">Retrouvez les réponses aux questions les plus posées par nos clients à travers le Congo.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">
+        Dans quelles villes proposez-vous des biens immobiliers ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Nous aidons nos clients à trouver une maison à louer à Brazzaville, Bacongo, Poto-Poto, Makelekele, Moungali, Talangaï, ainsi qu'à Pointe-Noire. Nous couvrons également Dolisie, Impfondo et d'autres villes du Congo sur demande.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Comment fonctionne la recherche de logement avec DreamHomes ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Vous définissez vos critères (localisation, budget, type de bien), et nos conseillers vous proposent une sélection personnalisée. Vous pouvez ensuite planifier des visites en personne ou virtuelles, et notre équipe vous accompagne jusqu'à la signature du contrat.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Quels types de biens proposez-vous à Brazzaville ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Nous proposons des villas, appartements, studios, duplex, maisons familiales et terrains à Brazzaville et Pointe-Noire. Nos biens sont disponibles en location mensuelle, location longue durée ou à la vente, selon votre projet.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Quels sont les prix de location à Brazzaville ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Les prix varient selon le quartier et le type de bien. Un studio à Poto-Poto peut coûter à partir de 50 000 FCFA/mois, tandis qu'une villa de standing sur le Plateau des 15 ans peut atteindre 1 500 000 FCFA/mois. Contactez-nous pour une estimation personnalisée.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Comment contacter un conseiller DreamHomes ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Vous pouvez nous appeler directement au +242 00 000 0000, du lundi au samedi de 8h à 18h. Vous pouvez également nous envoyer un message via WhatsApp ou remplir le formulaire de contact sur notre site. Nos conseillers vous répondent dans les plus brefs délais.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Proposez-vous des biens à vendre au Congo Brazzaville ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Oui, nous disposons d'un large catalogue de biens à vendre : villas, maisons familiales, duplex et terrains constructibles à Brazzaville et Pointe-Noire. Nos prix de vente débutent à partir de 5 000 000 FCFA selon la localisation et la superficie du bien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="seo-content">
+  <div class="container">
+    <h2>Maison à louer au Congo Brazzaville</h2>
+    <p>
+      Vous recherchez une maison à louer au Congo Brazzaville ? Notre plateforme vous aide à trouver facilement des villas, appartements, studios, duplex et terrains disponibles dans plusieurs quartiers de Brazzaville, Pointe-Noire, Dolisie et d'autres villes du Congo.
+    </p>
+    <p>
+      Que vous cherchiez une location mensuelle, une maison familiale, un bien de luxe ou une propriété à vendre, nous mettons à votre disposition une sélection adaptée à vos besoins et à votre budget.
+    </p>
+    <h3>Nos zones les plus recherchées</h3>
+    <p>
+      Brazzaville Centre-ville, Bacongo, Poto-Poto, Makelekele, Moungali, Talangaï, Plateau des 15 ans, ainsi que Pointe-Noire et d'autres zones résidentielles.
+    </p>
   </div>
 </section>
 
@@ -901,13 +1263,37 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#" class="nav-logo">Dream<span style="color:var(--accent)">Homes</span></a>
-      <p>L'agence immobilière de référence pour trouver votre propriété idéale en Afrique Centrale et au-delà.</p>
+      <a href="#" class="nav-logo">Maison de <span style="color:var(--accent)">Rêve</span> 🇨🇬</a>
+      <p>Nous aidons nos clients à trouver facilement une maison à louer partout au Congo.</p>
       <div class="footer-socials">
-        <a href="#" class="social-btn">f</a>
-        <a href="#" class="social-btn">in</a>
-        <a href="#" class="social-btn">ig</a>
-        <a href="#" class="social-btn">tw</a>
+        <!-- Facebook -->
+        <a href="https://facebook.com/maisonalouerbrazzaville" class="social-btn fb" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.514c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com/maisonalouerbrazzaville" class="social-btn ig" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/242000000000" class="social-btn wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://tiktok.com/@maisonalouerbrazzaville" class="social-btn tt" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.78a4.85 4.85 0 01-1.02-.09z"/></svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://youtube.com/@maisonalouerbrazzaville" class="social-btn yt" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/company/maisonalouerbrazzaville" class="social-btn li" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <!-- X / Twitter -->
+        <a href="https://x.com/maisonalouerbrz" class="social-btn tw" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-col">
@@ -917,7 +1303,6 @@
         <li><a href="#properties">Propriétés</a></li>
         <li><a href="#how">Services</a></li>
         <li><a href="#blog">Blog</a></li>
-        <li><a href="#" class="open-login">Connexion</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -935,87 +1320,18 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="#">Brazzaville, Congo</a></li>
-        <li><a href="tel:+242000000">+242 00 000 0000</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#c2abaca4ad82a6b0a7a3afaaadafa7b1eca1a5"><span class="__cf_email__" data-cfemail="9ef7f0f8f1defaecfbfff3f6f1f3fbedb0fdf9">[email&#160;protected]</span></a></li>
+        <li><a href="tel:+242068652120">+242 06 865 21 20</a></li>
+        <li><a href="contact.html">mpouckaffaires@gmail.com</span></a></li>
         <li><a href="#">Lun–Sam : 8h–18h</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 DreamHomes. Tous droits réservés.</span>
+    <span>© 2026 Maison de rêve 🇨🇬. Tous droits réservés.</span>
     <span>Politique de confidentialité · Mentions légales</span>
   </div>
 </footer>
 
-<!-- MODAL AUTH -->
-<div class="modal-overlay" id="loginModal">
-  <div class="modal">
-    <!-- Tabs -->
-    <div class="modal-tabs">
-      <button class="modal-tab active" id="tabLogin">Connexion</button>
-      <button class="modal-tab" id="tabRegister">Inscription</button>
-    </div>
-    <button class="modal-close" id="modalClose">✕</button>
-
-    <!-- LOGIN FORM -->
-    <div class="modal-body" id="formLogin">
-      <div id="loginMsg" class="auth-msg" style="display:none"></div>
-      <div class="form-group">
-        <label class="form-label">Adresse e-mail</label>
-        <input type="email" class="form-input" id="loginEmail" placeholder="votre@email.com">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Mot de passe</label>
-        <input type="password" class="form-input" id="loginPassword" placeholder="••••••••">
-      </div>
-      <button class="modal-submit" id="loginBtn">Se connecter</button>
-      <p style="text-align:center; margin-top:14px; font-size:.82rem; color:var(--gray-500)">
-        Pas encore de compte ? <a href="#" id="goRegister" style="color:var(--accent); text-decoration:none; font-weight:500">Créer un compte</a>
-      </p>
-    </div>
-
-    <!-- REGISTER FORM -->
-    <div class="modal-body" id="formRegister" style="display:none">
-      <div id="registerMsg" class="auth-msg" style="display:none"></div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Prénom</label>
-          <input type="text" class="form-input" id="regPrenom" placeholder="Jean">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Nom</label>
-          <input type="text" class="form-input" id="regNom" placeholder="Dupont">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Adresse e-mail</label>
-        <input type="email" class="form-input" id="regEmail" placeholder="votre@email.com">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Mot de passe</label>
-        <input type="password" class="form-input" id="regPassword" placeholder="Minimum 6 caractères">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Confirmer le mot de passe</label>
-        <input type="password" class="form-input" id="regConfirm" placeholder="••••••••">
-      </div>
-      <button class="modal-submit" id="registerBtn">Créer mon compte</button>
-      <p style="text-align:center; margin-top:14px; font-size:.82rem; color:var(--gray-500)">
-        Déjà un compte ? <a href="#" id="goLogin" style="color:var(--accent); text-decoration:none; font-weight:500">Se connecter</a>
-      </p>
-    </div>
-
-    <!-- LOGGED IN STATE -->
-    <div class="modal-body" id="formLogged" style="display:none">
-      <div style="text-align:center; padding: 10px 0 20px;">
-        <div style="width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;font-weight:700;color:white" id="userAvatar"></div>
-        <p style="font-family:var(--serif);font-size:1.3rem;font-weight:600;margin-bottom:4px" id="userWelcome"></p>
-        <p style="font-size:.82rem;color:var(--gray-500)" id="userEmail"></p>
-      </div>
-      <button class="modal-submit" id="logoutBtn" style="background:var(--gray-100);color:var(--black);">Se déconnecter</button>
-    </div>
-  </div>
-</div>
 
 <!-- BACK TO TOP -->
 <button class="back-top" id="backTop">
@@ -1054,7 +1370,7 @@ function propCard(p) {
     '</div>' +
     '<div class="prop-body">' +
       '<div class="prop-price">' + p.price + ' <small>' + p.unit + '</small></div>' +
-      '<div class="prop-name">' + p.name + '</div>' +
+      '<h2 class="prop-name">' + p.name + '</h2>' +
       '<div class="prop-loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> ' + p.loc + '</div>' +
       '<div class="prop-features">' +
         '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.beds + ' ch.</div>' +
@@ -1105,150 +1421,92 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
 
-// ─── AUTH SYSTEM (localStorage) ───
-var AUTH_KEY = 'dh_users';
-var SESSION_KEY = 'dh_session';
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  });
+});
 
-function getUsers() {
-  try { return JSON.parse(localStorage.getItem(AUTH_KEY)) || []; } catch(e) { return []; }
-}
-function saveUsers(users) {
-  localStorage.setItem(AUTH_KEY, JSON.stringify(users));
-}
-function getSession() {
-  try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch(e) { return null; }
-}
-function saveSession(user) {
-  localStorage.setItem(SESSION_KEY, JSON.stringify(user));
-}
-function clearSession() {
-  localStorage.removeItem(SESSION_KEY);
-}
-function showAuthMsg(id, text, type) {
-  var el = document.getElementById(id);
-  el.textContent = text;
-  el.className = 'auth-msg ' + type;
-  el.style.display = 'block';
-}
-function hideAuthMsg(id) {
-  var el = document.getElementById(id);
-  if (el) el.style.display = 'none';
-}
+// Demo button (scroll to properties instead of opening modal)
+document.getElementById('demoBtn') && document.getElementById('demoBtn').addEventListener('click', function(e) {
+  e.preventDefault();
+  var section = document.getElementById('properties');
+  if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 
-function updateNavForSession() {
-  var session = getSession();
-  var loginBtn = document.getElementById('openLoginBtn');
-  if (loginBtn) {
-    if (session) {
-      loginBtn.textContent = session.prenom || session.email.split('@')[0];
-    } else {
-      loginBtn.textContent = 'Connexion';
+// ─── CITIES SLIDER ───
+(function() {
+  var track = document.getElementById('citiesTrack');
+  var dotsWrap = document.getElementById('citiesDots');
+  var prevBtn = document.getElementById('citiesPrev');
+  var nextBtn = document.getElementById('citiesNext');
+  if (!track || !dotsWrap) return;
+
+  var cards = track.querySelectorAll('.city-card');
+  var total = cards.length;
+  var current = 0;
+  var autoTimer;
+
+  function getVisible() {
+    var w = window.innerWidth;
+    if (w < 600) return 1;
+    if (w < 900) return 2;
+    if (w < 1100) return 3;
+    return 4;
+  }
+
+  function totalPages() {
+    return Math.ceil(total / getVisible());
+  }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    var pages = totalPages();
+    for (var i = 0; i < pages; i++) {
+      var d = document.createElement('button');
+      d.className = 'cities-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Page ' + (i + 1));
+      (function(idx) {
+        d.addEventListener('click', function() { goTo(idx); resetTimer(); });
+      })(i);
+      dotsWrap.appendChild(d);
     }
   }
-}
 
-function switchTab(tab) {
-  var isLogin = tab === 'login';
-  document.getElementById('tabLogin').classList.toggle('active', isLogin);
-  document.getElementById('tabRegister').classList.toggle('active', !isLogin);
-  document.getElementById('formLogin').style.display = isLogin ? 'block' : 'none';
-  document.getElementById('formRegister').style.display = !isLogin ? 'block' : 'none';
-  document.getElementById('formLogged').style.display = 'none';
-  hideAuthMsg('loginMsg'); hideAuthMsg('registerMsg');
-}
-
-function openModal(tab) {
-  var session = getSession();
-  document.getElementById('loginModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-  if (session) {
-    document.getElementById('formLogin').style.display = 'none';
-    document.getElementById('formRegister').style.display = 'none';
-    document.getElementById('formLogged').style.display = 'block';
-    document.getElementById('userAvatar').textContent = (session.prenom || session.email)[0].toUpperCase();
-    document.getElementById('userWelcome').textContent = 'Bonjour, ' + (session.prenom || session.email.split('@')[0]) + ' !';
-    document.getElementById('userEmail').textContent = session.email;
-    document.getElementById('tabLogin').style.display = 'none';
-    document.getElementById('tabRegister').style.display = 'none';
-  } else {
-    document.getElementById('tabLogin').style.display = '';
-    document.getElementById('tabRegister').style.display = '';
-    switchTab(tab || 'login');
+  function goTo(page) {
+    var pages = totalPages();
+    current = ((page % pages) + pages) % pages;
+    var vis = getVisible();
+    var gap = 20;
+    var cardW = cards[0].offsetWidth;
+    var offset = current * vis * (cardW + gap);
+    track.style.transform = 'translateX(-' + offset + 'px)';
+    dotsWrap.querySelectorAll('.cities-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
   }
-}
-function closeModal() {
-  document.getElementById('loginModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
 
-// Tab switches
-document.getElementById('tabLogin').addEventListener('click', function() { switchTab('login'); });
-document.getElementById('tabRegister').addEventListener('click', function() { switchTab('register'); });
-document.getElementById('goRegister').addEventListener('click', function(e) { e.preventDefault(); switchTab('register'); });
-document.getElementById('goLogin').addEventListener('click', function(e) { e.preventDefault(); switchTab('login'); });
+  function resetTimer() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function() { goTo(current + 1); }, 3500);
+  }
 
-// Open modal triggers
-document.querySelectorAll('#openLoginBtn, .open-login').forEach(function(el) {
-  el.addEventListener('click', function(e) { e.preventDefault(); openModal('login'); });
-});
-document.getElementById('demoBtn') && document.getElementById('demoBtn').addEventListener('click', function(e) { e.preventDefault(); openModal('login'); });
+  prevBtn.addEventListener('click', function() { goTo(current - 1); resetTimer(); });
+  nextBtn.addEventListener('click', function() { goTo(current + 1); resetTimer(); });
 
-// Close modal
-document.getElementById('modalClose').addEventListener('click', closeModal);
-document.getElementById('loginModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+  window.addEventListener('resize', function() {
+    buildDots();
+    goTo(0);
+  });
 
-// LOGIN
-document.getElementById('loginBtn').addEventListener('click', function() {
-  var email = document.getElementById('loginEmail').value.trim();
-  var pass  = document.getElementById('loginPassword').value;
-  hideAuthMsg('loginMsg');
-  if (!email || !pass) { showAuthMsg('loginMsg', 'Veuillez remplir tous les champs.', 'error'); return; }
-  var users = getUsers();
-  var user = users.find(function(u) { return u.email === email && u.password === pass; });
-  if (!user) { showAuthMsg('loginMsg', 'Email ou mot de passe incorrect.', 'error'); return; }
-  saveSession(user);
-  updateNavForSession();
-  showAuthMsg('loginMsg', 'Connexion réussie ! Bienvenue ' + (user.prenom || user.email.split('@')[0]) + '.', 'success');
-  setTimeout(closeModal, 1200);
-});
-
-// REGISTER
-document.getElementById('registerBtn').addEventListener('click', function() {
-  var prenom  = document.getElementById('regPrenom').value.trim();
-  var nom     = document.getElementById('regNom').value.trim();
-  var email   = document.getElementById('regEmail').value.trim();
-  var pass    = document.getElementById('regPassword').value;
-  var confirm = document.getElementById('regConfirm').value;
-  hideAuthMsg('registerMsg');
-  if (!prenom || !nom || !email || !pass || !confirm) { showAuthMsg('registerMsg', 'Veuillez remplir tous les champs.', 'error'); return; }
-  if (!email.includes('@')) { showAuthMsg('registerMsg', 'Adresse e-mail invalide.', 'error'); return; }
-  if (pass.length < 6) { showAuthMsg('registerMsg', 'Le mot de passe doit contenir au moins 6 caractères.', 'error'); return; }
-  if (pass !== confirm) { showAuthMsg('registerMsg', 'Les mots de passe ne correspondent pas.', 'error'); return; }
-  var users = getUsers();
-  if (users.find(function(u) { return u.email === email; })) { showAuthMsg('registerMsg', 'Un compte existe déjà avec cet email.', 'error'); return; }
-  var newUser = { prenom: prenom, nom: nom, email: email, password: pass, createdAt: new Date().toISOString() };
-  users.push(newUser);
-  saveUsers(users);
-  saveSession(newUser);
-  updateNavForSession();
-  showAuthMsg('registerMsg', 'Compte créé avec succès ! Bienvenue ' + prenom + '.', 'success');
-  setTimeout(closeModal, 1200);
-});
-
-// LOGOUT
-document.getElementById('logoutBtn').addEventListener('click', function() {
-  clearSession();
-  updateNavForSession();
-  closeModal();
-});
-
-// Enter key support
-document.getElementById('loginPassword').addEventListener('keydown', function(e) { if (e.key === 'Enter') document.getElementById('loginBtn').click(); });
-document.getElementById('regConfirm').addEventListener('keydown', function(e) { if (e.key === 'Enter') document.getElementById('registerBtn').click(); });
-
-updateNavForSession();
-// ─────────────────────────────────────────────
+  buildDots();
+  goTo(0);
+  resetTimer();
+})();
 
 // Hamburger
 var menuOpen = false;
