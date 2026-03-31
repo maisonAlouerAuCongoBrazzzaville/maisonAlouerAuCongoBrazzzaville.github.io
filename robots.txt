@@ -1,0 +1,23 @@
+# robots.txt pour mpouck.github.io
+# Empêche certains robots de scanner des pages inutiles et guide Google
+
+# Autoriser tous les robots à accéder au site
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /test/
+
+# Bloquer certains bots connus pour spammer
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap pour faciliter l’indexation
+Sitemap: https://mpouck.github.io/sitemap.xml
