@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propriétés à louer et à vendre – Maison de Rêve Congo Brazzaville</title>
+<meta name="description" content="Parcourez toutes nos propriétés à louer et à vendre au Congo Brazzaville. Villas, appartements, studios, duplex et terrains disponibles à Brazzaville et Pointe-Noire.">
+<link rel="canonical" href="https://maisonaloueraucongobrazzzaville.github.io/proprietes.html">
+<link rel="shortcut icon" href="favicon.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-382PFZZQWE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-382PFZZQWE');
+</script>
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --black: #0d0d0d;
+    --white: #fafaf8;
+    --cream: #f5f2ec;
+    --accent: #c9a96e;
+    --accent-light: #e8d9be;
+    --gray-100: #f0ede8;
+    --gray-300: #c8c4bc;
+    --gray-500: #8a8680;
+    --gray-700: #4a4845;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Outfit', sans-serif;
+    --radius: 16px;
+    --radius-sm: 8px;
+    --shadow: 0 20px 60px rgba(13,13,13,.08);
+    --shadow-lg: 0 40px 100px rgba(13,13,13,.14);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 60px; height: 76px;
+    background: rgba(250,250,248,.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,169,110,.15);
+    transition: all .3s ease;
+    box-sizing: border-box;
+    max-width: 100vw;
+  }
+  nav.scrolled {
+    background: rgba(250,250,248,.98);
+    box-shadow: 0 4px 30px rgba(13,13,13,.06);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.6rem; font-weight: 600;
+    color: var(--black); text-decoration: none; letter-spacing: -.01em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex; align-items: center; gap: 40px; list-style: none;
+  }
+  .nav-links a {
+    font-size: .875rem; font-weight: 400; color: var(--gray-700);
+    text-decoration: none; letter-spacing: .02em; transition: color .2s; position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+    height: 1px; background: var(--accent); transform: scaleX(0); transition: transform .25s ease;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+  .nav-links a.active { color: var(--black); }
+  .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 101; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: .3s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-mobile-menu {
+    display: none; position: fixed; top: 76px; left: 0; right: 0;
+    background: #fafaf8; padding: 24px; gap: 4px; flex-direction: column;
+    border-bottom: 1px solid #f0ede8; z-index: 99;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  }
+  .nav-mobile-menu.open { display: flex; }
+  .nav-mobile-menu a {
+    font-size: 1rem; font-weight: 400; color: var(--gray-700);
+    text-decoration: none; padding: 12px 8px;
+    border-bottom: 1px solid var(--gray-100); transition: color .2s;
+  }
+  .nav-mobile-menu a:last-child { border-bottom: none; }
+  .nav-mobile-menu a:hover { color: var(--accent); }
+
+  /* ─── PAGE HERO ─── */
+  .page-hero {
+    padding: 56px 60px 60px;
+    background: var(--cream);
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; right: -80px; top: -80px;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-light) 0%, transparent 65%);
+    opacity: .45;
+  }
+  .page-hero-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 40px; flex-wrap: wrap; position: relative; z-index: 1;
+  }
+  .page-hero-left {}
+  .page-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: .75rem; font-weight: 600; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
+  }
+  .page-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--accent); }
+  .page-title {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 4.5vw, 4rem);
+    font-weight: 300; line-height: 1.1; letter-spacing: -.02em;
+  }
+  .page-title strong { font-weight: 600; display: block; }
+  .page-sub { font-size: .95rem; color: var(--gray-500); font-weight: 300; margin-top: 14px; max-width: 440px; line-height: 1.7; }
+  .page-hero-stats {
+    display: flex; gap: 32px; align-items: center;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-num {
+    font-family: var(--serif); font-size: 2rem; font-weight: 600; line-height: 1;
+    color: var(--black);
+  }
+  .hero-stat-num span { color: var(--accent); }
+  .hero-stat-label { font-size: .72rem; color: var(--gray-500); font-weight: 300; margin-top: 4px; }
+  .hero-stat-divider { width: 1px; height: 40px; background: var(--gray-300); }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb {
+    padding: 14px 60px;
+    padding-top: calc(76px + 14px);
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-100);
+    font-size: .8rem; color: var(--gray-500);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .breadcrumb a { color: var(--gray-500); text-decoration: none; transition: color .2s; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb-sep { color: var(--gray-300); }
+  .breadcrumb-current { color: var(--black); font-weight: 500; }
+
+  /* ─── MAIN LAYOUT ─── */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 60px;
+    align-items: start;
+  }
+
+  /* ─── SIDEBAR FILTERS ─── */
+  .sidebar {
+    position: sticky; top: 100px;
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: 0 4px 20px rgba(13,13,13,.04);
+  }
+  .sidebar-title {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+    margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .sidebar-reset {
+    font-family: var(--sans); font-size: .75rem; font-weight: 400;
+    color: var(--accent); cursor: pointer; text-decoration: none;
+    transition: color .2s;
+  }
+  .sidebar-reset:hover { color: var(--black); }
+  .filter-group { margin-bottom: 28px; }
+  .filter-label {
+    font-size: .7rem; font-weight: 600; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 12px;
+  }
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filter-chip {
+    padding: 6px 14px; border-radius: 50px;
+    border: 1.5px solid var(--gray-100); background: none;
+    font-family: var(--sans); font-size: .8rem; font-weight: 400;
+    color: var(--gray-700); cursor: pointer; transition: all .2s;
+  }
+  .filter-chip:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-chip.active { background: var(--black); border-color: var(--black); color: white; }
+  .filter-select {
+    width: 100%; padding: 11px 16px;
+    border: 1.5px solid var(--gray-100); border-radius: var(--radius-sm);
+    font-family: var(--sans); font-size: .875rem; color: var(--black);
+    background: white; outline: none; appearance: none;
+    cursor: pointer; transition: border-color .2s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%238a8680'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center;
+  }
+  .filter-select:focus { border-color: var(--accent); }
+  .price-range { display: flex; align-items: center; gap: 8px; }
+  .price-input {
+    flex: 1; padding: 10px 12px;
+    border: 1.5px solid var(--gray-100); border-radius: var(--radius-sm);
+    font-family: var(--sans); font-size: .8rem; color: var(--black);
+    background: white; outline: none; transition: border-color .2s;
+  }
+  .price-input:focus { border-color: var(--accent); }
+  .price-sep { color: var(--gray-300); font-size: .85rem; }
+  .filter-checkboxes { display: flex; flex-direction: column; gap: 10px; }
+  .filter-check {
+    display: flex; align-items: center; gap: 10px;
+    font-size: .875rem; color: var(--gray-700); cursor: pointer;
+  }
+  .filter-check input[type="checkbox"] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+  .sidebar-apply {
+    width: 100%; padding: 13px;
+    background: var(--black); color: white; border: none;
+    border-radius: 50px; font-family: var(--sans);
+    font-size: .875rem; font-weight: 500; cursor: pointer;
+    transition: all .25s ease; margin-top: 4px;
+  }
+  .sidebar-apply:hover { background: var(--accent); }
+
+  /* ─── RESULTS PANEL ─── */
+  .results-panel { padding-left: 40px; }
+  .results-toolbar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 28px; flex-wrap: wrap; gap: 16px;
+  }
+  .results-count {
+    font-size: .9rem; color: var(--gray-500); font-weight: 300;
+  }
+  .results-count strong { color: var(--black); font-weight: 600; }
+  .toolbar-right { display: flex; align-items: center; gap: 16px; }
+  .sort-select {
+    padding: 9px 14px; border: 1.5px solid var(--gray-100); border-radius: var(--radius-sm);
+    font-family: var(--sans); font-size: .8rem; color: var(--black);
+    background: white; outline: none; cursor: pointer; transition: border-color .2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='%238a8680'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 10px center; padding-right: 28px;
+  }
+  .sort-select:focus { border-color: var(--accent); }
+  .view-btns { display: flex; gap: 4px; }
+  .view-btn {
+    width: 36px; height: 36px; border-radius: var(--radius-sm);
+    border: 1.5px solid var(--gray-100); background: none;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all .2s;
+  }
+  .view-btn svg { width: 16px; height: 16px; fill: var(--gray-500); }
+  .view-btn.active, .view-btn:hover { background: var(--black); border-color: var(--black); }
+  .view-btn.active svg, .view-btn:hover svg { fill: white; }
+
+  /* ─── ACTIVE FILTERS ─── */
+  .active-filters {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+    display: none;
+  }
+  .active-filters.has-filters { display: flex; }
+  .active-filter-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; background: var(--cream); border-radius: 50px;
+    font-size: .78rem; color: var(--gray-700); font-weight: 400;
+  }
+  .active-filter-remove {
+    width: 14px; height: 14px; border-radius: 50%; background: var(--gray-300);
+    border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: .65rem; color: var(--gray-700); transition: background .2s;
+    padding: 0; line-height: 1;
+  }
+  .active-filter-remove:hover { background: var(--accent); color: white; }
+
+  /* ─── PROPS GRID ─── */
+  .props-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    transition: all .3s;
+  }
+  .props-grid.list-view {
+    grid-template-columns: 1fr;
+  }
+
+  /* ─── PROP CARD ─── */
+  .prop-card {
+    background: var(--white); border-radius: var(--radius);
+    overflow: hidden; cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 4px 20px rgba(13,13,13,.04);
+    border: 1px solid rgba(201,169,110,.06);
+    animation: fadeUp .4s ease both;
+  }
+  .prop-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .prop-img {
+    position: relative; overflow: hidden; height: 200px;
+  }
+  .prop-img-bg {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .6s ease;
+  }
+  .prop-card:hover .prop-img-bg { transform: scale(1.07); }
+  .prop-badge {
+    position: absolute; top: 14px; left: 14px;
+    background: var(--accent); color: white;
+    font-size: .7rem; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; padding: 5px 12px; border-radius: 50px;
+  }
+  .prop-badge.sale { background: var(--black); }
+  .prop-badge.luxury { background: linear-gradient(135deg, #b8860b, #daa520); }
+  .prop-fav {
+    position: absolute; top: 14px; right: 14px;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(250,250,248,.9); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .25s; backdrop-filter: blur(4px);
+  }
+  .prop-fav:hover { background: #fee2e2; }
+  .prop-fav svg { width: 16px; height: 16px; fill: var(--gray-300); transition: fill .2s; }
+  .prop-fav.liked svg { fill: #e55; }
+  .prop-body { padding: 20px; }
+  .prop-price {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+    color: var(--black); margin-bottom: 5px; line-height: 1.1;
+  }
+  .prop-price small { font-size: .7rem; font-weight: 400; color: var(--gray-500); font-family: var(--sans); }
+  .prop-name { font-size: .95rem; font-weight: 500; color: var(--black); margin-bottom: 6px; }
+  .prop-loc {
+    font-size: .78rem; color: var(--gray-500); font-weight: 300;
+    display: flex; align-items: center; gap: 4px; margin-bottom: 14px;
+  }
+  .prop-loc svg { fill: var(--accent); flex-shrink: 0; }
+  .prop-features {
+    display: flex; gap: 14px; padding-top: 14px;
+    border-top: 1px solid var(--gray-100); margin-bottom: 14px;
+  }
+  .prop-feat {
+    display: flex; align-items: center; gap: 5px;
+    font-size: .78rem; color: var(--gray-500); font-weight: 300;
+  }
+  .prop-feat svg { width: 14px; height: 14px; fill: var(--gray-300); }
+  .prop-visit-btn {
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    width: 100%; padding: 11px;
+    background: var(--cream); border: 1.5px solid var(--gray-100); border-radius: 50px;
+    font-family: var(--sans); font-size: .8rem; font-weight: 500; color: var(--black);
+    text-decoration: none; cursor: pointer; transition: all .25s;
+  }
+  .prop-visit-btn:hover { background: var(--black); border-color: var(--black); color: white; }
+  .prop-visit-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+  /* LIST VIEW CARD */
+  .props-grid.list-view .prop-card {
+    display: grid; grid-template-columns: 280px 1fr;
+  }
+  .props-grid.list-view .prop-img { height: 100%; min-height: 200px; }
+  .props-grid.list-view .prop-body { padding: 24px 28px; display: flex; flex-direction: column; justify-content: space-between; }
+  .props-grid.list-view .prop-price { font-size: 1.5rem; }
+  .props-grid.list-view .prop-name { font-size: 1.05rem; }
+
+  /* ─── NO RESULTS ─── */
+  .no-results {
+    grid-column: 1/-1; text-align: center; padding: 80px 20px;
+    color: var(--gray-500);
+  }
+  .no-results svg { width: 48px; height: 48px; fill: var(--gray-300); margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto; }
+  .no-results h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; margin-bottom: 8px; color: var(--black); }
+  .no-results p { font-size: .875rem; font-weight: 300; }
+  .no-results a { color: var(--accent); text-decoration: none; font-weight: 500; }
+
+  /* ─── PAGINATION ─── */
+  .pagination {
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; margin-top: 48px; padding-bottom: 20px;
+  }
+  .page-btn {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1.5px solid var(--gray-100); background: none;
+    font-family: var(--sans); font-size: .875rem; font-weight: 400;
+    color: var(--gray-700); cursor: pointer; transition: all .2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .page-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .page-btn.active { background: var(--black); border-color: var(--black); color: white; font-weight: 600; }
+  .page-btn.prev-next { width: auto; padding: 0 16px; border-radius: 50px; font-size: .8rem; gap: 6px; }
+  .page-btn.prev-next svg { width: 14px; height: 14px; fill: currentColor; }
+  .page-btn.prev-next:disabled { opacity: .3; cursor: not-allowed; }
+
+  /* ─── CTA BANNER ─── */
+  .cta-banner {
+    padding: 64px 60px;
+    display: grid; grid-template-columns: 1fr auto;
+    align-items: center; gap: 40px;
+    background: var(--cream); position: relative; overflow: hidden;
+    margin: 0;
+  }
+  .cta-banner::before {
+    content: ''; position: absolute; right: -100px; top: -100px;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%); opacity: .5;
+  }
+  .cta-title {
+    font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400; line-height: 1.2; max-width: 540px; position: relative; z-index: 1;
+  }
+  .cta-title strong { font-weight: 600; color: var(--accent); }
+  .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; position: relative; z-index: 1; }
+  .btn-primary {
+    background: var(--black); color: var(--white);
+    padding: 14px 32px; border-radius: 50px;
+    font-size: .9rem; font-weight: 500; letter-spacing: .02em;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all .25s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,169,110,.4); }
+  .btn-outline {
+    padding: 14px 28px; border-radius: 50px;
+    border: 1.5px solid var(--black);
+    font-size: .9rem; font-weight: 500;
+    text-decoration: none; color: var(--black);
+    background: none; cursor: pointer; transition: all .25s ease;
+  }
+  .btn-outline:hover { background: var(--black); color: white; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black); color: white;
+    padding: 60px 60px 30px;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; margin-bottom: 48px;
+  }
+  .footer-brand .nav-logo { color: white; font-size: 1.5rem; }
+  .footer-brand p { font-size: .85rem; color: rgba(255,255,255,.4); font-weight: 300; line-height: 1.7; margin-top: 14px; max-width: 240px; }
+  .footer-socials { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+  .social-btn {
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.15);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all .25s ease; text-decoration: none;
+    color: rgba(255,255,255,.5);
+  }
+  .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
+  .social-btn:hover { transform: translateY(-3px); border-color: transparent; }
+  .social-btn.fb:hover { background: #1877F2; color: white; }
+  .social-btn.ig:hover { background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; border: none; }
+  .social-btn.wa:hover { background: #25D366; color: white; }
+  .footer-col h4 { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { font-size: .85rem; color: rgba(255,255,255,.5); text-decoration: none; font-weight: 300; transition: color .2s; }
+  .footer-col ul li a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 24px; display: flex;
+    justify-content: space-between; align-items: center;
+    font-size: .78rem; color: rgba(255,255,255,.3);
+  }
+
+  /* ─── BACK TO TOP ─── */
+  .back-top {
+    position: fixed; bottom: 30px; right: 30px;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--black); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(13,13,13,.2);
+    opacity: 0; transform: translateY(20px); pointer-events: none;
+    transition: all .3s ease; z-index: 50;
+  }
+  .back-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .back-top:hover { background: var(--accent); }
+  .back-top svg { width: 20px; height: 20px; fill: white; }
+
+  /* ─── MODAL ─── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(13,13,13,.6); backdrop-filter: blur(8px);
+    display: none; align-items: center; justify-content: center; padding: 20px;
+  }
+  .modal-overlay.open { display: flex; animation: fadeIn .2s ease; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal-detail {
+    background: white; border-radius: var(--radius);
+    max-width: 740px; width: 100%;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden; position: relative;
+    max-height: 90vh; overflow-y: auto;
+    animation: slideUp .3s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .modal-close {
+    position: absolute; top: 14px; right: 14px;
+    width: 32px; height: 32px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.3); background: rgba(13,13,13,.5);
+    backdrop-filter: blur(6px);
+    cursor: pointer; font-size: 1rem; color: white;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .2s; z-index: 20;
+  }
+  .modal-close:hover { background: rgba(13,13,13,.8); }
+  .modal-body { padding: 28px 32px 36px; }
+  .modal-badge {
+    display: inline-block; margin-bottom: 12px;
+    background: var(--accent); color: white;
+    font-size: .7rem; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 50px;
+  }
+  .modal-badge.sale { background: var(--black); }
+  .modal-price {
+    font-family: var(--serif); font-size: 2rem; font-weight: 600;
+    color: var(--black); margin-bottom: 4px;
+  }
+  .modal-price small { font-size: .85rem; font-weight: 300; color: var(--gray-500); font-family: var(--sans); }
+  .modal-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .modal-loc {
+    font-size: .875rem; color: var(--gray-500); display: flex; align-items: center; gap: 5px;
+    margin-bottom: 20px;
+  }
+  .modal-loc svg { fill: var(--accent); }
+  .modal-feats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    margin-bottom: 24px;
+  }
+  .modal-feat {
+    background: var(--cream); border-radius: var(--radius-sm);
+    padding: 14px; text-align: center;
+  }
+  .modal-feat-icon { font-size: 1.2rem; margin-bottom: 4px; }
+  .modal-feat-val { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; line-height: 1; }
+  .modal-feat-label { font-size: .72rem; color: var(--gray-500); font-weight: 300; margin-top: 2px; }
+  .modal-desc { font-size: .9rem; color: var(--gray-700); line-height: 1.75; margin-bottom: 24px; font-weight: 300; }
+  .modal-amenities { margin-bottom: 24px; }
+  .modal-amenities h4 { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .amenity-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .amenity-tag {
+    padding: 5px 14px; background: var(--gray-100); border-radius: 50px;
+    font-size: .78rem; color: var(--gray-700);
+  }
+  .modal-actions { display: flex; gap: 12px; }
+  .modal-btn-primary {
+    flex: 1; padding: 14px;
+    background: var(--black); color: white; border: none;
+    border-radius: 50px; font-family: var(--sans);
+    font-size: .9rem; font-weight: 500; cursor: pointer;
+    transition: all .25s; text-decoration: none; text-align: center;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .modal-btn-primary:hover { background: var(--accent); }
+  .modal-btn-secondary {
+    padding: 14px 24px;
+    background: none; color: var(--black);
+    border: 1.5px solid var(--black); border-radius: 50px;
+    font-family: var(--sans); font-size: .9rem; font-weight: 500; cursor: pointer;
+    transition: all .25s; text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .modal-btn-secondary:hover { background: var(--black); color: white; }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ─── CAROUSEL ─── */
+  .modal-carousel {
+    position: relative; width: 100%; height: 320px;
+    overflow: hidden; background: var(--black); flex-shrink: 0;
+  }
+  .carousel-track {
+    display: flex; height: 100%;
+    transition: transform .45s cubic-bezier(.4,0,.2,1);
+  }
+  .carousel-slide {
+    min-width: 100%; height: 100%; overflow: hidden;
+  }
+  .carousel-slide img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .6s ease;
+  }
+  .carousel-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(250,250,248,.92); border: none; cursor: pointer;
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 16px rgba(13,13,13,.18);
+    transition: all .2s; z-index: 10;
+  }
+  .carousel-arrow:hover { background: var(--accent); transform: translateY(-50%) scale(1.08); }
+  .carousel-arrow:hover svg { fill: white; }
+  .carousel-arrow svg { width: 20px; height: 20px; fill: var(--black); transition: fill .2s; }
+  .carousel-prev { left: 14px; }
+  .carousel-next { right: 14px; }
+  .carousel-dots {
+    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 10; align-items: center;
+  }
+  .carousel-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: rgba(255,255,255,.45); border: none; cursor: pointer;
+    transition: all .25s; padding: 0; flex-shrink: 0;
+  }
+  .carousel-dot.active {
+    background: white; width: 20px; border-radius: 4px;
+  }
+  .carousel-counter {
+    position: absolute; top: 14px; right: 14px;
+    background: rgba(13,13,13,.55); color: white;
+    font-family: var(--sans); font-size: .72rem; font-weight: 500;
+    padding: 4px 10px; border-radius: 50px; backdrop-filter: blur(4px); z-index: 10;
+  }
+
+  /* ─── SIDEBAR TOGGLE (mobile) ─── */
+  .sidebar-toggle-btn {
+    display: none;
+    align-items: center; gap: 8px;
+    padding: 11px 22px;
+    background: var(--black); color: white;
+    border: none; border-radius: 50px;
+    font-family: var(--sans); font-size: .875rem; font-weight: 500;
+    cursor: pointer; margin-bottom: 20px;
+    transition: background .2s;
+  }
+  .sidebar-toggle-btn:hover { background: var(--accent); }
+  .sidebar-toggle-btn svg { width: 16px; height: 16px; fill: white; }
+
+  /* ─── SIDEBAR OVERLAY (mobile) ─── */
+  .sidebar-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(13,13,13,.55);
+    z-index: 149;
+    backdrop-filter: blur(3px);
+  }
+  .sidebar-overlay.open { display: block; }
+
+  /* ─── CALL POPUP ─── */
+  .call-popup-overlay {
+    position: fixed; inset: 0; z-index: 300;
+    background: rgba(13,13,13,.6);
+    backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    animation: fadeIn .2s ease;
+  }
+  .call-popup {
+    background: white; border-radius: 24px;
+    padding: 36px 28px 28px; text-align: center;
+    max-width: 320px; width: 100%;
+    box-shadow: 0 40px 100px rgba(13,13,13,.22);
+    animation: slideUp .3s ease;
+    position: relative;
+  }
+  .call-popup-icon { font-size: 2.4rem; margin-bottom: 14px; }
+  .call-popup-label {
+    font-size: .7rem; color: var(--gray-500); font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .call-popup-number {
+    font-family: var(--serif); font-size: 2rem; font-weight: 600;
+    color: var(--black); margin-bottom: 6px; line-height: 1;
+  }
+  .call-popup-hint { font-size: .78rem; color: var(--gray-500); margin-bottom: 24px; font-weight: 300; }
+  .call-popup-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 14px;
+    background: var(--black); color: white; border: none; border-radius: 50px;
+    font-family: var(--sans); font-size: .9rem; font-weight: 500;
+    text-decoration: none; cursor: pointer; transition: background .2s; margin-bottom: 10px;
+  }
+  .call-popup-btn:hover { background: var(--accent); }
+  .call-popup-btn svg { width: 16px; height: 16px; fill: white; }
+  .call-popup-dismiss {
+    font-size: .82rem; color: var(--gray-500); cursor: pointer;
+    background: none; border: none; font-family: var(--sans);
+    transition: color .2s; padding: 6px 12px;
+  }
+  .call-popup-dismiss:hover { color: var(--black); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1100px) {
+    .main-layout { grid-template-columns: 240px 1fr; padding: 40px 40px; }
+    .props-grid { grid-template-columns: repeat(2, 1fr); }
+    .props-grid.list-view .prop-card { grid-template-columns: 220px 1fr; }
+  }
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .breadcrumb { padding: 14px 24px; padding-top: calc(76px + 14px); }
+    .page-hero { padding: 40px 24px 48px; }
+    .page-hero-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
+    .page-hero-stats { flex-direction: row; flex-wrap: wrap; gap: 20px; }
+    .main-layout { grid-template-columns: 1fr; padding: 24px; gap: 0; }
+    /* Sidebar : drawer fixe hors du flow */
+    .sidebar-toggle-btn { display: flex; }
+    .sidebar {
+      position: fixed !important;
+      top: 0; left: 0; bottom: 0;
+      width: min(88vw, 320px);
+      z-index: 150;
+      overflow-y: auto;
+      transform: translateX(-110%);
+      transition: transform .32s cubic-bezier(.4,0,.2,1);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      box-shadow: 6px 0 40px rgba(13,13,13,.18);
+      margin: 0;
+      padding-top: calc(76px + 16px);
+    }
+    .sidebar.sidebar-open { transform: translateX(0); }
+    .results-panel { padding-left: 0; }
+    .results-toolbar { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .toolbar-right { width: 100%; justify-content: space-between; }
+    .sort-select { flex: 1; min-width: 0; }
+    .props-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .cta-banner { grid-template-columns: 1fr; padding: 48px 24px; }
+    .cta-actions { flex-direction: row; }
+    footer { padding: 48px 24px 24px; }
+  }
+  @media (max-width: 600px) {
+    /* Stats restent sur la même ligne, plus compactes */
+    .page-hero-stats { gap: 14px; align-items: center; }
+    .hero-stat-num { font-size: 1.5rem; }
+    .hero-stat-label { font-size: .65rem; }
+    .hero-stat-divider { height: 28px; }
+    .props-grid { grid-template-columns: 1fr; }
+    .props-grid.list-view .prop-card { grid-template-columns: 1fr; }
+    .props-grid.list-view .prop-img { height: 200px; }
+    /* Modal responsive */
+    .modal-carousel { height: 220px; }
+    .carousel-arrow { width: 34px; height: 34px; }
+    .carousel-arrow svg { width: 16px; height: 16px; }
+    .modal-body { padding: 16px 18px 24px; }
+    .modal-price { font-size: 1.5rem; }
+    .modal-feats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .modal-feat { padding: 10px 8px; }
+    .modal-feat-val { font-size: 1rem; }
+    .modal-actions { flex-direction: column; }
+    .modal-btn-secondary { justify-content: center; }
+    /* CTA */
+    .cta-actions { flex-direction: column; gap: 10px; }
+    .cta-actions .btn-primary, .cta-actions .btn-outline { text-align: center; justify-content: center; }
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    /* Toolbar */
+    .sort-select { width: 100%; }
+    .results-toolbar { gap: 10px; }
+    .toolbar-right { flex-wrap: wrap; }
+  }
+  @media (max-width: 400px) {
+    .breadcrumb { padding: 12px 16px; padding-top: calc(76px + 12px); }
+    .page-hero { padding: 32px 16px 40px; }
+    .main-layout { padding: 16px; }
+    .modal-body { padding: 14px 14px 20px; }
+    .filter-chip { padding: 6px 10px; font-size: .75rem; }
+    .sidebar-apply { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Maison de <span>Rêve</span> 🇨🇬</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="proprietes.html" class="active">Propriétés</a></li>
+    <li><a href="#">À propos</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#" class="btn-primary" style="padding:10px 22px;font-size:.8rem;">Nous appeler</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html">Accueil</a>
+  <a href="proprietes.html">Propriétés</a>
+  <a href="#">À propos</a>
+  <a href="#">Blog</a>
+  <a href="#">Contact</a>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">Propriétés</span>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-left">
+      <p class="page-eyebrow">Catalogue complet</p>
+      <h1 class="page-title">Nos <strong>Propriétés</strong></h1>
+      <p class="page-sub">Explorez toutes nos annonces disponibles à Brazzaville, Pointe-Noire et dans tout le Congo. Filtrez selon vos critères et trouvez votre bien idéal.</p>
+    </div>
+    <div class="page-hero-stats" id="heroStats">
+      <div class="hero-stat">
+        <div class="hero-stat-num" id="statTotal">0</div>
+        <div class="hero-stat-label">Propriétés</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Villes</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span>7</span>j/7</div>
+        <div class="hero-stat-label">Disponibles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-title">
+      Filtres
+      <a href="#" class="sidebar-reset" id="resetFilters">Réinitialiser</a>
+    </div>
+
+    <div class="filter-group">
+      <label class="filter-label">Transaction</label>
+      <div class="filter-chips" id="typeChips">
+        <button class="filter-chip active" data-type="all">Tous</button>
+        <button class="filter-chip" data-type="rent">Location</button>
+        <button class="filter-chip" data-type="sale">Vente</button>
+        <button class="filter-chip" data-type="luxury">Luxe</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label class="filter-label">Type de bien</label>
+      <select class="filter-select" id="filterCategory">
+        <option value="">Tous les types</option>
+        <option value="villa">Villa</option>
+        <option value="appartement">Appartement</option>
+        <option value="studio">Studio</option>
+        <option value="duplex">Duplex</option>
+        <option value="maison">Maison</option>
+        <option value="terrain">Terrain</option>
+        <option value="bureau">Bureau</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label class="filter-label">Localisation</label>
+      <select class="filter-select" id="filterLoc">
+        <option value="">Toutes les villes</option>
+        <option value="Brazzaville">Brazzaville</option>
+        <option value="Pointe-Noire">Pointe-Noire</option>
+        <option value="Dolisie">Dolisie</option>
+        <option value="Bacongo">Bacongo</option>
+        <option value="Poto-Poto">Poto-Poto</option>
+        <option value="Makelekele">Makelekele</option>
+        <option value="Moungali">Moungali</option>
+        <option value="Plateau des 15 ans">Plateau des 15 ans</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label class="filter-label">Budget (FCFA/mois ou vente)</label>
+      <div class="price-range">
+        <input type="number" class="price-input" id="priceMin" placeholder="Min" min="0">
+        <span class="price-sep">–</span>
+        <input type="number" class="price-input" id="priceMax" placeholder="Max" min="0">
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label class="filter-label">Chambres min.</label>
+      <div class="filter-chips" id="bedsChips">
+        <button class="filter-chip active" data-beds="0">Tout</button>
+        <button class="filter-chip" data-beds="1">1+</button>
+        <button class="filter-chip" data-beds="2">2+</button>
+        <button class="filter-chip" data-beds="3">3+</button>
+        <button class="filter-chip" data-beds="4">4+</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label class="filter-label">Équipements</label>
+      <div class="filter-checkboxes">
+        <label class="filter-check"><input type="checkbox" value="piscine"> Piscine</label>
+        <label class="filter-check"><input type="checkbox" value="gardien"> Gardien</label>
+        <label class="filter-check"><input type="checkbox" value="garage"> Garage</label>
+        <label class="filter-check"><input type="checkbox" value="climatisation"> Climatisation</label>
+        <label class="filter-check"><input type="checkbox" value="meuble"> Meublé</label>
+        <label class="filter-check"><input type="checkbox" value="groupe"> Groupe électrogène</label>
+      </div>
+    </div>
+
+    <button class="sidebar-apply" id="applyFilters">Appliquer les filtres</button>
+  </aside>
+
+  <!-- RESULTS -->
+  <div class="results-panel">
+    <!-- Bouton filtre mobile -->
+    <button class="sidebar-toggle-btn" id="sidebarToggleBtn">
+      <svg viewBox="0 0 24 24"><path d="M4.25 5.61C6.27 8.2 10 13 10 13v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39A.998.998 0 0 0 18.95 4H5.04c-.83 0-1.3.95-.79 1.61z"/></svg>
+      Filtres
+    </button>
+    <div class="results-toolbar">
+      <p class="results-count"><strong id="countDisplay">18</strong> propriétés trouvées</p>
+      <div class="toolbar-right">
+        <select class="sort-select" id="sortSelect">
+          <option value="default">Trier par défaut</option>
+          <option value="price-asc">Prix croissant</option>
+          <option value="price-desc">Prix décroissant</option>
+          <option value="area-desc">Surface décroissante</option>
+          <option value="beds-desc">Plus de chambres</option>
+        </select>
+        <div class="view-btns">
+          <button class="view-btn active" id="gridViewBtn" title="Vue grille">
+            <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zm0 11h7v7H3zm11-11h7v7h-7zm0 11h7v7h-7z"/></svg>
+          </button>
+          <button class="view-btn" id="listViewBtn" title="Vue liste">
+            <svg viewBox="0 0 24 24"><path d="M3 4h18v2H3zm0 7h18v2H3zm0 7h18v2H3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="active-filters" id="activeFilters"></div>
+
+    <div class="props-grid" id="propsGrid"></div>
+
+    <div class="pagination" id="pagination"></div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div>
+    <h2 class="cta-title">Vous ne trouvez pas ce que vous <strong>cherchez ?</strong></h2>
+    <p style="margin-top:14px; font-size:.9rem; color:var(--gray-500); font-weight:300">Contactez nos conseillers — ils trouveront le bien idéal pour vous.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="tel:+242068652120" class="btn-primary">Nous appeler</a>
+    <a href="https://wa.me/242068652120" class="btn-outline" target="_blank">WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">Maison de <span>Rêve</span> 🇨🇬</a>
+      <p>Votre partenaire immobilier de confiance au Congo Brazzaville depuis 2026.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/maisonalouerbrazzaville" class="social-btn fb" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://instagram.com/maisonalouerbrazzaville" class="social-btn ig" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/242068652120" class="social-btn wa" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="proprietes.html">Propriétés</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Types de biens</h4>
+      <ul>
+        <li><a href="#">Appartements</a></li>
+        <li><a href="#">Villas</a></li>
+        <li><a href="#">Maisons</a></li>
+        <li><a href="#">Studios</a></li>
+        <li><a href="#">Bureaux</a></li>
+        <li><a href="#">Terrains</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Brazzaville, Congo</a></li>
+        <li><a href="#">+242 06 865 21 20</a></li>
+        <li><a href="#">mpouckaffaires@gmail.com</a></li>
+        <li><a href="#">Lun–Sam : 8h–18h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Maison de rêve 🇨🇬. Tous droits réservés.</span>
+    <span>Politique de confidentialité · Mentions légales</span>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop">
+  <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</button>
+
+<!-- PROPERTY DETAIL MODAL -->
+<div class="modal-overlay" id="propModal">
+  <div class="modal-detail" id="modalContent"></div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ─── PROPERTIES DATA ───
+var properties = [
+  {
+    id: 1, name: 'Villa Prestige Corniche', loc: 'Brazzaville, Plateau des 15 ans',
+    price: 1200000, unit: 'FCFA/mois', type: 'luxury', category: 'villa', badge: 'Luxe',
+    img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80',
+    beds: 5, baths: 3, area: 420, visitLink: '',
+    amenities: ['Piscine', 'Gardien 24h', 'Garage 2 voitures', 'Climatisation', 'Groupe électrogène', 'Jardin'],
+    desc: 'Somptueuse villa de prestige sur le Plateau des 15 ans offrant une vue imprenable sur la ville. Architecture contemporaine, finitions haut de gamme et grand jardin arboré. Idéale pour familles expatriées ou diplomates.'
+  },
+  {
+    id: 2, name: 'Appartement Central', loc: 'Brazzaville, Centre-ville',
+    price: 180000, unit: 'FCFA/mois', type: 'rent', category: 'appartement', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80',
+    beds: 3, baths: 2, area: 115, visitLink: '',
+    amenities: ['Climatisation', 'Parking', 'Gardien', 'Balcon'],
+    desc: 'Bel appartement moderne au cœur de Brazzaville. Lumineux, bien agencé avec cuisine équipée et salon spacieux. Proche de toutes commodités, commerces et administrations.'
+  },
+  {
+    id: 3, name: 'Maison Familiale Makelekele', loc: 'Brazzaville, Makelekele',
+    price: 8500000, unit: 'FCFA', type: 'sale', category: 'maison', badge: 'Vente',
+    img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&q=80',
+    beds: 4, baths: 2, area: 220, visitLink: '',
+    amenities: ['Garage', 'Jardin', 'Groupe électrogène', 'Puits'],
+    desc: 'Grande maison familiale à vendre dans le quartier résidentiel de Makelekele. Terrain clôturé, belle cour intérieure et espace de stationnement. Titre foncier disponible.'
+  },
+  {
+    id: 4, name: 'Studio Moderne Poto-Poto', loc: 'Brazzaville, Poto-Poto',
+    price: 75000, unit: 'FCFA/mois', type: 'rent', category: 'studio', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80',
+    beds: 1, baths: 1, area: 48, visitLink: '',
+    amenities: ['Meublé', 'Wifi', 'Eau courante', 'Électricité'],
+    desc: 'Studio entièrement meublé et équipé dans le dynamique quartier de Poto-Poto. Idéal pour un professionnel ou un étudiant. Eau et électricité comprises dans le loyer.'
+  },
+  {
+    id: 5, name: 'Villa Bord de Mer', loc: 'Pointe-Noire, Côte Sauvage',
+    price: 2500000, unit: 'FCFA/mois', type: 'luxury', category: 'villa', badge: 'Luxe',
+    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80',
+    beds: 6, baths: 4, area: 580, visitLink: '',
+    amenities: ['Piscine', 'Vue mer', 'Plage privée', 'Climatisation', 'Gardien', 'Garage', 'Groupe électrogène'],
+    desc: 'Exceptionnelle villa pieds dans l\'eau sur la Côte Sauvage à Pointe-Noire. Vue panoramique sur l\'Océan Atlantique, plage privée et piscine à débordement. Le summum du luxe au Congo.'
+  },
+  {
+    id: 6, name: 'Duplex Bacongo', loc: 'Brazzaville, Bacongo',
+    price: 12000000, unit: 'FCFA', type: 'sale', category: 'duplex', badge: 'Vente',
+    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    beds: 3, baths: 2, area: 160, visitLink: '',
+    amenities: ['Deux niveaux', 'Terrasse', 'Parking', 'Proche école'],
+    desc: 'Duplex contemporain à vendre à Bacongo. Distribution sur deux niveaux avec séjour en double hauteur, trois chambres spacieuses et terrasse au dernier étage. Idéal pour investissement locatif.'
+  },
+  {
+    id: 7, name: 'Villa Moungali Résidence', loc: 'Brazzaville, Moungali',
+    price: 650000, unit: 'FCFA/mois', type: 'luxury', category: 'villa', badge: 'Luxe',
+    img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80',
+    beds: 4, baths: 3, area: 310, visitLink: '',
+    amenities: ['Piscine', 'Gardien', 'Garage', 'Jardin', 'Climatisation'],
+    desc: 'Villa moderne dans une résidence sécurisée à Moungali. Belle piscine, jardin tropical et garage double. Environnement calme et sécurisé, idéal pour familles.'
+  },
+  {
+    id: 8, name: 'Appartement Talangaï F3', loc: 'Brazzaville, Talangaï',
+    price: 120000, unit: 'FCFA/mois', type: 'rent', category: 'appartement', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80',
+    beds: 2, baths: 1, area: 85, visitLink: '',
+    amenities: ['Eau courante', 'Électricité', 'Parking', 'Balcon'],
+    desc: 'Appartement F3 lumineux au 2ème étage dans le quartier de Talangaï. Salon, salle à manger, deux chambres et cuisine indépendante. Proche transport en commun et marché.'
+  },
+  {
+    id: 9, name: 'Terrain Constructible Kintélé', loc: 'Brazzaville, Kintélé',
+    price: 5500000, unit: 'FCFA', type: 'sale', category: 'terrain', badge: 'Vente',
+    img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80',
+    beds: 0, baths: 0, area: 600, visitLink: '',
+    amenities: ['Titre foncier', 'Viabilisé', 'Accès route bitumée'],
+    desc: 'Beau terrain de 600 m² entièrement viabilisé à Kintélé, zone en pleine expansion. Titre foncier sécurisé, accès route bitumée, eau et électricité en bordure. Parfait pour construction villa ou immeuble.'
+  },
+  {
+    id: 10, name: 'Bureau Équipé Centre-Ville', loc: 'Brazzaville, Centre-ville',
+    price: 350000, unit: 'FCFA/mois', type: 'rent', category: 'bureau', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80',
+    beds: 0, baths: 1, area: 95, visitLink: '',
+    amenities: ['Meublé', 'Wifi', 'Climatisation', 'Parking', 'Sécurité', 'Groupe électrogène'],
+    desc: 'Bureau professionnel entièrement équipé en plein centre-ville de Brazzaville. Accueil, salle de réunion, espace bureau en open space et parking privatif. Idéal pour PME ou représentations.'
+  },
+  {
+    id: 11, name: 'Villa Pointe-Noire Centre', loc: 'Pointe-Noire, Centre',
+    price: 900000, unit: 'FCFA/mois', type: 'luxury', category: 'villa', badge: 'Luxe',
+    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80',
+    beds: 5, baths: 3, area: 380, visitLink: '',
+    amenities: ['Piscine', 'Climatisation', 'Gardien', 'Garage', 'Groupe électrogène', 'Jardin'],
+    desc: 'Grande villa de standing dans le quartier résidentiel de Pointe-Noire. Architecture moderne, matériaux nobles et jardin paysager. Proche des ambassades et institutions internationales.'
+  },
+  {
+    id: 12, name: 'Studio Étudiant Bacongo', loc: 'Brazzaville, Bacongo',
+    price: 55000, unit: 'FCFA/mois', type: 'rent', category: 'studio', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=700&q=80',
+    beds: 1, baths: 1, area: 35, visitLink: '',
+    amenities: ['Eau courante', 'Électricité', 'Proche université'],
+    desc: 'Studio fonctionnel idéal pour étudiant ou jeune professionnel. Situé à deux minutes de l\'université Omar Bongo. Charges comprises dans le loyer mensuel.'
+  },
+  {
+    id: 13, name: 'Maison Traditionnelle Poto-Poto', loc: 'Brazzaville, Poto-Poto',
+    price: 6000000, unit: 'FCFA', type: 'sale', category: 'maison', badge: 'Vente',
+    img: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=700&q=80',
+    beds: 3, baths: 2, area: 180, visitLink: '',
+    amenities: ['Grand terrain', 'Cour intérieure', 'Puits'],
+    desc: 'Maison traditionnelle congolaise rénovée dans l\'authentique quartier de Poto-Poto. Grand terrain avec cour intérieure arborée, idéal pour une famille ou un investisseur locatif.'
+  },
+  {
+    id: 14, name: 'Appartement Neuf Dolisie', loc: 'Dolisie, Centre',
+    price: 95000, unit: 'FCFA/mois', type: 'rent', category: 'appartement', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=700&q=80',
+    beds: 2, baths: 1, area: 70, visitLink: '',
+    amenities: ['Neuf', 'Eau courante', 'Électricité', 'Parking'],
+    desc: 'Bel appartement neuf livré clé en main au cœur de Dolisie. Finitions modernes, deux chambres confortables et cuisine indépendante équipée. Disponible immédiatement.'
+  },
+  {
+    id: 15, name: 'Villa Diplomatique Plateau', loc: 'Brazzaville, Plateau des 15 ans',
+    price: 18000000, unit: 'FCFA', type: 'sale', category: 'villa', badge: 'Vente',
+    img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80',
+    beds: 6, baths: 4, area: 650, visitLink: '',
+    amenities: ['Piscine', 'Gardien 24h', 'Garage triple', 'Climatisation', 'Groupe électrogène', 'Titre foncier'],
+    desc: 'Propriété d\'exception à vendre sur le Plateau des 15 ans. Villa diplomatie de 650 m² sur terrain de 1200 m², construction de qualité supérieure. Un investissement rare sur le marché de Brazzaville.'
+  },
+  {
+    id: 16, name: 'Duplex Moderne Moungali', loc: 'Brazzaville, Moungali',
+    price: 250000, unit: 'FCFA/mois', type: 'rent', category: 'duplex', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80',
+    beds: 3, baths: 2, area: 145, visitLink: '',
+    amenities: ['Meublé', 'Climatisation', 'Terrasse', 'Parking', 'Gardien'],
+    desc: 'Duplex contemporain meublé avec terrasse privative à Moungali. Cuisine américaine ouverte sur salon, trois chambres et deux salles de bains. Tout confort pour une location haut de gamme.'
+  },
+  {
+    id: 17, name: 'Terrain Pointe-Noire Front de Mer', loc: 'Pointe-Noire, Côte Sauvage',
+    price: 22000000, unit: 'FCFA', type: 'sale', category: 'terrain', badge: 'Vente',
+    img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80',
+    beds: 0, baths: 0, area: 1200, visitLink: '',
+    amenities: ['Titre foncier', 'Vue mer', 'Accès direct plage', 'Viabilisé'],
+    desc: 'Terrain de 1200 m² en première ligne sur la Côte Sauvage à Pointe-Noire. Vue panoramique sur l\'Océan Atlantique et accès direct à la plage. Une opportunité rare pour un projet hôtelier ou résidentiel de prestige.'
+  },
+  {
+    id: 18, name: 'Appartement Résidence Sécurisée', loc: 'Brazzaville, Bacongo',
+    price: 200000, unit: 'FCFA/mois', type: 'rent', category: 'appartement', badge: 'Location',
+    img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80',
+    beds: 3, baths: 2, area: 105, visitLink: '',
+    amenities: ['Gardien 24h', 'Parking', 'Climatisation', 'Groupe électrogène', 'Wifi'],
+    desc: 'Appartement de standing dans une résidence fermée et sécurisée à Bacongo. Trois chambres, séjour lumineux, cuisine équipée et parking privatif. Groupe électrogène inclus pour votre confort.'
+  }
+];
+
+// ─── STATE ───
+var currentType = 'all';
+var currentBeds = 0;
+var currentPage = 1;
+var ITEMS_PER_PAGE = 9;
+var isListView = false;
+var filteredResults = [];
+
+// ─── RENDER CARDS ───
+function propCard(p) {
+  var badgeClass = p.type === 'sale' ? 'sale' : (p.type === 'luxury' ? 'luxury' : '');
+  var priceFormatted = p.price.toLocaleString('fr-FR');
+  var bedsDisplay = p.beds > 0 ? '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.beds + ' ch.</div>' : '';
+  var bathsDisplay = p.baths > 0 ? '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.baths + ' sdb</div>' : '';
+  return '<div class="prop-card" data-id="' + p.id + '" style="animation-delay:' + (Math.random()*.2).toFixed(2) + 's">' +
+    '<div class="prop-img">' +
+      '<img class="prop-img-bg" src="' + p.img + '" alt="' + p.name + '" loading="lazy">' +
+      '<span class="prop-badge ' + badgeClass + '">' + p.badge + '</span>' +
+      '<button class="prop-fav" data-id="' + p.id + '" title="Favoris"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>' +
+    '</div>' +
+    '<div class="prop-body">' +
+      '<div class="prop-price">' + priceFormatted + ' <small>' + p.unit + '</small></div>' +
+      '<h2 class="prop-name">' + p.name + '</h2>' +
+      '<div class="prop-loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> ' + p.loc + '</div>' +
+      '<div class="prop-features">' + bedsDisplay + bathsDisplay +
+        '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm0 16h18v2H3zm2-4h14v2H5zm0-4h14v2H5z"/></svg>' + p.area + ' m²</div>' +
+      '</div>' +
+      '<button class="prop-visit-btn" data-open="' + p.id + '"><svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> Voir les détails</button>' +
+    '</div>' +
+  '</div>';
+}
+
+// ─── APPLY FILTERS ───
+function applyFilters() {
+  var type = currentType;
+  var category = document.getElementById('filterCategory').value;
+  var loc = document.getElementById('filterLoc').value;
+  var priceMin = parseInt(document.getElementById('priceMin').value) || 0;
+  var priceMax = parseInt(document.getElementById('priceMax').value) || Infinity;
+  var beds = currentBeds;
+  var amenityChecks = Array.from(document.querySelectorAll('.filter-checkboxes input:checked')).map(function(c){ return c.value; });
+
+  filteredResults = properties.filter(function(p) {
+    if (type !== 'all' && p.type !== type) return false;
+    if (category && p.category !== category) return false;
+    if (loc && p.loc.indexOf(loc) === -1) return false;
+    if (p.price < priceMin || p.price > priceMax) return false;
+    if (beds > 0 && p.beds < beds) return false;
+    if (amenityChecks.length > 0) {
+      var has = amenityChecks.every(function(a) {
+        return p.amenities.some(function(am) { return am.toLowerCase().indexOf(a) !== -1; });
+      });
+      if (!has) return false;
+    }
+    return true;
+  });
+
+  // Sort
+  var sort = document.getElementById('sortSelect').value;
+  if (sort === 'price-asc') filteredResults.sort(function(a,b){ return a.price - b.price; });
+  else if (sort === 'price-desc') filteredResults.sort(function(a,b){ return b.price - a.price; });
+  else if (sort === 'area-desc') filteredResults.sort(function(a,b){ return b.area - a.area; });
+  else if (sort === 'beds-desc') filteredResults.sort(function(a,b){ return b.beds - a.beds; });
+
+  currentPage = 1;
+  renderResults();
+  renderActiveFilters(type, category, loc, beds);
+}
+
+// ─── RENDER RESULTS ───
+function renderResults() {
+  var grid = document.getElementById('propsGrid');
+  var count = filteredResults.length;
+  document.getElementById('countDisplay').textContent = count;
+
+  var start = (currentPage - 1) * ITEMS_PER_PAGE;
+  var pageItems = filteredResults.slice(start, start + ITEMS_PER_PAGE);
+
+  if (count === 0) {
+    grid.innerHTML = '<div class="no-results"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><h3>Aucune propriété trouvée</h3><p>Essayez de modifier vos critères de recherche. <br><a href="#" id="clearAll">Voir toutes les propriétés</a></p></div>';
+    document.getElementById('pagination').innerHTML = '';
+    var ca = document.getElementById('clearAll');
+    if (ca) ca.addEventListener('click', function(e){ e.preventDefault(); resetAll(); });
+    return;
+  }
+
+  grid.innerHTML = pageItems.map(propCard).join('');
+  renderPagination();
+}
+
+// ─── PAGINATION ───
+function renderPagination() {
+  var total = Math.ceil(filteredResults.length / ITEMS_PER_PAGE);
+  var pag = document.getElementById('pagination');
+  if (total <= 1) { pag.innerHTML = ''; return; }
+  var html = '';
+  html += '<button class="page-btn prev-next" id="prevPage" ' + (currentPage === 1 ? 'disabled' : '') + '><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg> Précédent</button>';
+  for (var i = 1; i <= total; i++) {
+    html += '<button class="page-btn' + (i === currentPage ? ' active' : '') + '" data-page="' + i + '">' + i + '</button>';
+  }
+  html += '<button class="page-btn prev-next" id="nextPage" ' + (currentPage === total ? 'disabled' : '') + '>Suivant <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>';
+  pag.innerHTML = html;
+
+  pag.querySelectorAll('[data-page]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      currentPage = parseInt(btn.getAttribute('data-page'));
+      renderResults();
+      document.querySelector('.main-layout').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  var prev = document.getElementById('prevPage');
+  var next = document.getElementById('nextPage');
+  if (prev) prev.addEventListener('click', function(){ if (currentPage > 1){ currentPage--; renderResults(); document.querySelector('.main-layout').scrollIntoView({ behavior: 'smooth' }); } });
+  if (next) next.addEventListener('click', function(){ if (currentPage < total){ currentPage++; renderResults(); document.querySelector('.main-layout').scrollIntoView({ behavior: 'smooth' }); } });
+}
+
+// ─── ACTIVE FILTER TAGS ───
+function renderActiveFilters(type, category, loc, beds) {
+  var wrap = document.getElementById('activeFilters');
+  var tags = [];
+  if (type !== 'all') tags.push({ label: type === 'rent' ? 'Location' : type === 'sale' ? 'Vente' : 'Luxe', key: 'type' });
+  if (category) tags.push({ label: category.charAt(0).toUpperCase() + category.slice(1), key: 'category' });
+  if (loc) tags.push({ label: loc, key: 'loc' });
+  if (beds > 0) tags.push({ label: beds + '+ chambres', key: 'beds' });
+
+  if (tags.length === 0) { wrap.classList.remove('has-filters'); wrap.innerHTML = ''; return; }
+  wrap.classList.add('has-filters');
+  wrap.innerHTML = tags.map(function(t) {
+    return '<span class="active-filter-tag">' + t.label + '<button class="active-filter-remove" data-key="' + t.key + '">×</button></span>';
+  }).join('');
+
+  wrap.querySelectorAll('.active-filter-remove').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var key = btn.getAttribute('data-key');
+      if (key === 'type') { currentType = 'all'; document.querySelectorAll('#typeChips .filter-chip').forEach(function(c){ c.classList.toggle('active', c.getAttribute('data-type') === 'all'); }); }
+      if (key === 'category') document.getElementById('filterCategory').value = '';
+      if (key === 'loc') document.getElementById('filterLoc').value = '';
+      if (key === 'beds') { currentBeds = 0; document.querySelectorAll('#bedsChips .filter-chip').forEach(function(c){ c.classList.toggle('active', c.getAttribute('data-beds') === '0'); }); }
+      applyFilters();
+    });
+  });
+}
+
+// ─── RESET ───
+function resetAll() {
+  currentType = 'all'; currentBeds = 0; currentPage = 1;
+  document.getElementById('filterCategory').value = '';
+  document.getElementById('filterLoc').value = '';
+  document.getElementById('priceMin').value = '';
+  document.getElementById('priceMax').value = '';
+  document.getElementById('sortSelect').value = 'default';
+  document.querySelectorAll('.filter-checkboxes input').forEach(function(c){ c.checked = false; });
+  document.querySelectorAll('#typeChips .filter-chip').forEach(function(c){ c.classList.toggle('active', c.getAttribute('data-type') === 'all'); });
+  document.querySelectorAll('#bedsChips .filter-chip').forEach(function(c){ c.classList.toggle('active', c.getAttribute('data-beds') === '0'); });
+  applyFilters();
+}
+
+// ─── EXTRA IMAGES PAR PROPRIÉTÉ ───
+var propImages = {
+  1:  ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80','https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=80','https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&q=80'],
+  2:  ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80','https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80','https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80'],
+  3:  ['https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&q=80','https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=700&q=80','https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=700&q=80'],
+  4:  ['https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80','https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=700&q=80','https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80'],
+  5:  ['https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80','https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80','https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80'],
+  6:  ['https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80','https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80','https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80'],
+  7:  ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80','https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80','https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80'],
+  8:  ['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80','https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80','https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80'],
+  9:  ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80','https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700&q=80','https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80'],
+  10: ['https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80','https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=700&q=80','https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=700&q=80'],
+  11: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80','https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=80','https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80'],
+  12: ['https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=700&q=80','https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80','https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80'],
+  13: ['https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=700&q=80','https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80'],
+  14: ['https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=700&q=80','https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80','https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80'],
+  15: ['https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80','https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80','https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80'],
+  16: ['https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80','https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80'],
+  17: ['https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80','https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80','https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80'],
+  18: ['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80','https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80','https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80']
+};
+
+// ─── CAROUSEL STATE ───
+var carouselIndex = 0;
+var carouselImages = [];
+
+function carouselGo(idx) {
+  var n = carouselImages.length;
+  carouselIndex = (idx + n) % n;
+  var track = document.getElementById('carouselTrack');
+  var counter = document.getElementById('carouselCounter');
+  var dots = document.querySelectorAll('.carousel-dot');
+  if (track) track.style.transform = 'translateX(-' + (carouselIndex * 100) + '%)';
+  if (counter) counter.textContent = (carouselIndex + 1) + ' / ' + n;
+  dots.forEach(function(d, i) { d.classList.toggle('active', i === carouselIndex); });
+}
+
+// ─── MODAL ───
+function openModal(id) {
+  var p = properties.find(function(x){ return x.id === id; });
+  if (!p) return;
+
+  carouselImages = propImages[p.id] || [p.img];
+  carouselIndex = 0;
+
+  var badgeClass = p.type === 'sale' ? 'sale' : '';
+  var priceFormatted = p.price.toLocaleString('fr-FR');
+  var bedsRow = p.beds > 0 ? '<div class="modal-feat"><div class="modal-feat-icon">🛏</div><div class="modal-feat-val">' + p.beds + '</div><div class="modal-feat-label">Chambre' + (p.beds > 1 ? 's' : '') + '</div></div>' : '';
+  var bathsRow = p.baths > 0 ? '<div class="modal-feat"><div class="modal-feat-icon">🚿</div><div class="modal-feat-val">' + p.baths + '</div><div class="modal-feat-label">Salle' + (p.baths > 1 ? 's' : '') + ' de bain</div></div>' : '';
+
+  // Carousel slides
+  var slides = carouselImages.map(function(url) {
+    return '<div class="carousel-slide"><img src="' + url + '" alt="' + p.name + '" loading="lazy"></div>';
+  }).join('');
+
+  // Dots
+  var dots = carouselImages.map(function(_, i) {
+    return '<button class="carousel-dot' + (i === 0 ? ' active' : '') + '" data-dot="' + i + '"></button>';
+  }).join('');
+
+  var content =
+    '<button class="modal-close" id="closeModal">✕</button>' +
+    '<div class="modal-carousel">' +
+      '<div class="carousel-track" id="carouselTrack">' + slides + '</div>' +
+      (carouselImages.length > 1
+        ? '<button class="carousel-arrow carousel-prev" id="carouselPrev"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>' +
+          '<button class="carousel-arrow carousel-next" id="carouselNext"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>' +
+          '<div class="carousel-dots">' + dots + '</div>' +
+          '<div class="carousel-counter" id="carouselCounter">1 / ' + carouselImages.length + '</div>'
+        : '') +
+    '</div>' +
+    '<div class="modal-body">' +
+      '<span class="modal-badge ' + badgeClass + '">' + p.badge + '</span>' +
+      '<div class="modal-price">' + priceFormatted + ' <small>' + p.unit + '</small></div>' +
+      '<div class="modal-name">' + p.name + '</div>' +
+      '<div class="modal-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> ' + p.loc + '</div>' +
+      '<div class="modal-feats">' + bedsRow + bathsRow +
+        '<div class="modal-feat"><div class="modal-feat-icon">📐</div><div class="modal-feat-val">' + p.area + '</div><div class="modal-feat-label">m² surface</div></div>' +
+      '</div>' +
+      '<p class="modal-desc">' + p.desc + '</p>' +
+      '<div class="modal-amenities"><h4>Équipements & services</h4><div class="amenity-list">' +
+        p.amenities.map(function(a){ return '<span class="amenity-tag">' + a + '</span>'; }).join('') +
+      '</div></div>' +
+      '<div class="modal-actions">' +
+        '<a href="tel:+242068652120" class="modal-btn-primary"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Appeler maintenant</a>' +
+        '<a href="https://wa.me/242068652120?text=Bonjour, je suis intéressé par : ' + encodeURIComponent(p.name) + '" class="modal-btn-secondary" target="_blank"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>' +
+      '</div>' +
+    '</div>';
+
+  document.getElementById('modalContent').innerHTML = content;
+  document.getElementById('propModal').classList.add('open');
+  document.getElementById('closeModal').addEventListener('click', closeModal);
+
+  // Carousel events
+  var prevBtn = document.getElementById('carouselPrev');
+  var nextBtn = document.getElementById('carouselNext');
+  if (prevBtn) prevBtn.addEventListener('click', function(e){ e.stopPropagation(); carouselGo(carouselIndex - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function(e){ e.stopPropagation(); carouselGo(carouselIndex + 1); });
+  document.querySelectorAll('.carousel-dot').forEach(function(dot) {
+    dot.addEventListener('click', function(e){ e.stopPropagation(); carouselGo(parseInt(dot.getAttribute('data-dot'))); });
+  });
+
+  // Swipe support
+  var startX = 0;
+  var carousel = document.querySelector('.modal-carousel');
+  if (carousel) {
+    carousel.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', function(e){
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) carouselGo(diff > 0 ? carouselIndex + 1 : carouselIndex - 1);
+    });
+  }
+
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('propModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ─── EVENT LISTENERS ───
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Init
+  document.getElementById('statTotal').textContent = properties.length;
+  filteredResults = properties.slice();
+  renderResults();
+
+  // Type chips
+  document.querySelectorAll('#typeChips .filter-chip').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#typeChips .filter-chip').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentType = btn.getAttribute('data-type');
+    });
+  });
+
+  // Beds chips
+  document.querySelectorAll('#bedsChips .filter-chip').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#bedsChips .filter-chip').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentBeds = parseInt(btn.getAttribute('data-beds'));
+    });
+  });
+
+  // Apply
+  document.getElementById('applyFilters').addEventListener('click', applyFilters);
+
+  // Reset
+  document.getElementById('resetFilters').addEventListener('click', function(e){ e.preventDefault(); resetAll(); });
+
+  // Sort
+  document.getElementById('sortSelect').addEventListener('change', applyFilters);
+
+  // View toggle
+  document.getElementById('gridViewBtn').addEventListener('click', function() {
+    isListView = false;
+    document.getElementById('propsGrid').classList.remove('list-view');
+    document.getElementById('gridViewBtn').classList.add('active');
+    document.getElementById('listViewBtn').classList.remove('active');
+  });
+  document.getElementById('listViewBtn').addEventListener('click', function() {
+    isListView = true;
+    document.getElementById('propsGrid').classList.add('list-view');
+    document.getElementById('listViewBtn').classList.add('active');
+    document.getElementById('gridViewBtn').classList.remove('active');
+  });
+
+  // Card clicks (modal & fav)
+  document.addEventListener('click', function(e) {
+    // Open modal
+    var openBtn = e.target.closest('[data-open]');
+    if (openBtn) { openModal(parseInt(openBtn.getAttribute('data-open'))); return; }
+
+    // Favorite
+    var favBtn = e.target.closest('.prop-fav');
+    if (favBtn) {
+      e.stopPropagation();
+      favBtn.classList.toggle('liked');
+      return;
+    }
+
+    // Close modal on overlay
+    if (e.target.id === 'propModal') closeModal();
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
+  // Nav scroll
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('navbar');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+    var bt = document.getElementById('backTop');
+    if (bt) bt.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // Back to top
+  var bt2 = document.getElementById('backTop');
+  if (bt2) bt2.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // Sidebar toggle (mobile) — drawer fixe
+  var sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+  var sidebarEl = document.querySelector('.sidebar');
+  var sidebarOverlay = document.getElementById('sidebarOverlay');
+
+  function openSidebar() {
+    sidebarEl.classList.add('sidebar-open');
+    sidebarOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    sidebarToggleBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> Fermer';
+  }
+  function closeSidebar() {
+    sidebarEl.classList.remove('sidebar-open');
+    sidebarOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+    sidebarToggleBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M4.25 5.61C6.27 8.2 10 13 10 13v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39A.998.998 0 0 0 18.95 4H5.04c-.83 0-1.3.95-.79 1.61z"/></svg> Filtres';
+  }
+
+  if (sidebarToggleBtn && sidebarEl) {
+    sidebarToggleBtn.addEventListener('click', function() {
+      sidebarEl.classList.contains('sidebar-open') ? closeSidebar() : openSidebar();
+    });
+    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+    // Fermer après application des filtres
+    document.getElementById('applyFilters').addEventListener('click', function() {
+      if (window.innerWidth <= 900) closeSidebar();
+    });
+  }
+
+  // ─── CALL POPUP ───
+  function showCallPopup(number) {
+    var display = number.replace('+242', '+242 ').replace(/(\d{2})(\d{3})(\d{2})(\d{2})$/, '$1 $2 $3 $4');
+    var overlay = document.createElement('div');
+    overlay.className = 'call-popup-overlay';
+    overlay.innerHTML =
+      '<div class="call-popup">' +
+        '<div class="call-popup-icon">📞</div>' +
+        '<div class="call-popup-label">Nous appeler</div>' +
+        '<div class="call-popup-number">' + display + '</div>' +
+        '<div class="call-popup-hint">Appuyez sur le bouton ci-dessous pour lancer l\'appel</div>' +
+        '<a href="tel:' + number + '" class="call-popup-btn">' +
+          '<svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>' +
+          'Appeler maintenant' +
+        '</a>' +
+        '<button class="call-popup-dismiss" id="dismissCall">Annuler</button>' +
+      '</div>';
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', function(e){ if (e.target === overlay) overlay.remove(); });
+    document.getElementById('dismissCall').addEventListener('click', function(){ overlay.remove(); });
+    overlay.querySelector('.call-popup-btn').addEventListener('click', function(){ setTimeout(function(){ overlay.remove(); }, 400); });
+  }
+
+  // Intercepter tous les liens tel:
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var number = link.getAttribute('href').replace('tel:', '');
+      showCallPopup(number);
+    });
+  });
+
+  // Hamburger
+  var ham = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var menuOpen = false;
+  if (ham && mobileMenu) {
+    ham.addEventListener('click', function(e) {
+      e.stopPropagation(); menuOpen = !menuOpen;
+      ham.classList.toggle('open', menuOpen);
+      mobileMenu.classList.toggle('open', menuOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menuOpen = false; ham.classList.remove('open'); mobileMenu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (menuOpen && !ham.contains(e.target) && !mobileMenu.contains(e.target)) {
+        menuOpen = false; ham.classList.remove('open'); mobileMenu.classList.remove('open');
+      }
+    });
+  }
+
+  // Reveal on scroll
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+
+});
+</script>
+</body>
+</html>
