@@ -617,63 +617,143 @@
     font-size: .78rem; color: rgba(255,255,255,.3);
   }
 
-  /* ─── MODAL ─── */
+  /* ─── MODAL PROPRIÉTÉ ─── */
   .modal-overlay {
     position: fixed; inset: 0; z-index: 200;
     background: rgba(13,13,13,.6); backdrop-filter: blur(8px);
     display: none; align-items: center; justify-content: center; padding: 20px;
   }
   .modal-overlay.open { display: flex; animation: fadeIn .2s ease; }
-  .modal {
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal-detail {
     background: white; border-radius: var(--radius);
-    max-width: 520px; width: 100%;
-    box-shadow: var(--shadow-lg); animation: fadeSlideUp .3s ease;
+    max-width: 740px; width: 100%;
+    box-shadow: var(--shadow-lg);
     overflow: hidden; position: relative;
+    max-height: 90vh; overflow-y: auto;
+    animation: slideUp .3s ease;
   }
-  .modal-tabs {
-    display: flex; border-bottom: 1px solid var(--gray-100);
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-  .modal-tab {
-    flex: 1; padding: 20px; border: none; background: none;
-    font-family: var(--sans); font-size: .9rem; font-weight: 500;
-    color: var(--gray-500); cursor: pointer; transition: all .2s;
-    border-bottom: 2px solid transparent; margin-bottom: -1px;
-  }
-  .modal-tab.active { color: var(--black); border-bottom-color: var(--accent); }
   .modal-close {
-    position: absolute; top: 14px; right: 16px;
+    position: absolute; top: 14px; right: 14px;
     width: 32px; height: 32px; border-radius: 50%;
-    border: 1px solid var(--gray-100); background: none;
-    cursor: pointer; font-size: 1.1rem; color: var(--gray-500);
+    border: 1px solid rgba(255,255,255,.3); background: rgba(13,13,13,.5);
+    backdrop-filter: blur(6px);
+    cursor: pointer; font-size: 1rem; color: white;
     display: flex; align-items: center; justify-content: center;
-    transition: all .2s; z-index: 1;
+    transition: all .2s; z-index: 20;
   }
-  .modal-close:hover { background: var(--gray-100); color: var(--black); }
-  .modal-body { padding: 28px 32px 32px; }
-  .form-group { margin-bottom: 18px; }
-  .form-label { font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-700); display: block; margin-bottom: 8px; }
-  .form-input {
-    width: 100%; padding: 12px 16px;
-    border: 1.5px solid var(--gray-100); border-radius: var(--radius-sm);
-    font-family: var(--sans); font-size: .9rem; outline: none;
-    transition: border-color .2s; background: white;
+  .modal-close:hover { background: rgba(13,13,13,.8); }
+  .modal-body { padding: 28px 32px 36px; }
+  .modal-badge {
+    display: inline-block; margin-bottom: 12px;
+    background: var(--accent); color: white;
+    font-size: .7rem; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 50px;
   }
-  .form-input:focus { border-color: var(--accent); }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .modal-submit {
-    width: 100%; padding: 14px;
+  .modal-badge.sale { background: var(--black); }
+  .modal-price {
+    font-family: var(--serif); font-size: 2rem; font-weight: 600;
+    color: var(--black); margin-bottom: 4px;
+  }
+  .modal-price small { font-size: .85rem; font-weight: 300; color: var(--gray-500); font-family: var(--sans); }
+  .modal-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .modal-loc {
+    font-size: .875rem; color: var(--gray-500); display: flex; align-items: center; gap: 5px;
+    margin-bottom: 20px;
+  }
+  .modal-loc svg { fill: var(--accent); }
+  .modal-feats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    margin-bottom: 24px;
+  }
+  .modal-feat {
+    background: var(--cream); border-radius: var(--radius-sm);
+    padding: 14px; text-align: center;
+  }
+  .modal-feat-icon { font-size: 1.2rem; margin-bottom: 4px; }
+  .modal-feat-val { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; line-height: 1; }
+  .modal-feat-label { font-size: .72rem; color: var(--gray-500); font-weight: 300; margin-top: 2px; }
+  .modal-desc { font-size: .9rem; color: var(--gray-700); line-height: 1.75; margin-bottom: 24px; font-weight: 300; }
+  .modal-amenities { margin-bottom: 24px; }
+  .modal-amenities h4 { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .amenity-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .amenity-tag {
+    padding: 5px 14px; background: var(--gray-100); border-radius: 50px;
+    font-size: .78rem; color: var(--gray-700);
+  }
+  .modal-actions { display: flex; gap: 12px; }
+  .modal-btn-primary {
+    flex: 1; padding: 14px;
     background: var(--black); color: white; border: none;
     border-radius: 50px; font-family: var(--sans);
-    font-size: .95rem; font-weight: 500; cursor: pointer;
-    margin-top: 8px; transition: all .25s ease;
+    font-size: .9rem; font-weight: 500; cursor: pointer;
+    transition: all .25s; text-decoration: none; text-align: center;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
   }
-  .modal-submit:hover { background: var(--accent); }
-  .auth-msg {
-    padding: 12px 16px; border-radius: var(--radius-sm);
-    font-size: .85rem; margin-bottom: 16px; font-weight: 500;
+  .modal-btn-primary:hover { background: var(--accent); }
+  .modal-btn-secondary {
+    padding: 14px 24px;
+    background: none; color: var(--black);
+    border: 1.5px solid var(--black); border-radius: 50px;
+    font-family: var(--sans); font-size: .9rem; font-weight: 500; cursor: pointer;
+    transition: all .25s; text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
   }
-  .auth-msg.success { background: #e6f9f0; color: #1a7a4a; border: 1px solid #b2ebd0; }
-  .auth-msg.error { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .modal-btn-secondary:hover { background: var(--black); color: white; }
+
+  /* ─── CAROUSEL ─── */
+  .modal-carousel {
+    position: relative; width: 100%; height: 320px;
+    overflow: hidden; background: var(--black); flex-shrink: 0;
+  }
+  .carousel-track {
+    display: flex; height: 100%;
+    transition: transform .45s cubic-bezier(.4,0,.2,1);
+  }
+  .carousel-slide {
+    min-width: 100%; height: 100%; overflow: hidden;
+  }
+  .carousel-slide img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .6s ease;
+  }
+  .carousel-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(250,250,248,.92); border: none; cursor: pointer;
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 16px rgba(13,13,13,.18);
+    transition: all .2s; z-index: 10;
+  }
+  .carousel-arrow:hover { background: var(--accent); transform: translateY(-50%) scale(1.08); }
+  .carousel-arrow:hover svg { fill: white; }
+  .carousel-arrow svg { width: 20px; height: 20px; fill: var(--black); transition: fill .2s; }
+  .carousel-prev { left: 14px; }
+  .carousel-next { right: 14px; }
+  .carousel-dots {
+    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 10; align-items: center;
+  }
+  .carousel-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: rgba(255,255,255,.45); border: none; cursor: pointer;
+    transition: all .25s; padding: 0; flex-shrink: 0;
+  }
+  .carousel-dot.active { background: white; width: 20px; border-radius: 4px; }
+  .carousel-counter {
+    position: absolute; top: 14px; right: 14px;
+    background: rgba(13,13,13,.55); color: white;
+    font-family: var(--sans); font-size: .72rem; font-weight: 500;
+    padding: 4px 10px; border-radius: 50px; backdrop-filter: blur(4px); z-index: 10;
+  }
+
+  /* badge luxe */
+  .prop-badge.luxury { background: linear-gradient(135deg, #b8860b, #daa520); }
 
   /* ─── CITIES CAROUSEL ─── */
   .cities-section { padding: 72px 60px; background: var(--white); }
@@ -937,6 +1017,20 @@
     .stat-item { min-width: 0; padding: 0 10px; }
     .cta-banner .btn-primary, .cta-banner .btn-outline { width: 100%; justify-content: center; text-align: center; }
     .search-card { grid-template-columns: 1fr; }
+    /* Modal responsive */
+    .modal-carousel { height: 220px; }
+    .carousel-arrow { width: 34px; height: 34px; }
+    .carousel-arrow svg { width: 16px; height: 16px; }
+    .modal-body { padding: 16px 18px 24px; }
+    .modal-price { font-size: 1.5rem; }
+    .modal-feats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .modal-feat { padding: 10px 8px; }
+    .modal-feat-val { font-size: 1rem; }
+    .modal-actions { flex-direction: column; }
+    .modal-btn-secondary { justify-content: center; }
+  }
+  @media (max-width: 400px) {
+    .modal-body { padding: 14px 14px 20px; }
   }
 </style>
 </head>
@@ -947,7 +1041,7 @@
   <a href="#" class="nav-logo">Maison de <span>Rêve</span> 🇨🇬</a>
   <ul class="nav-links">
     <li><a href="#about">À propos</a></li>
-    <li><a href="proprietes.html">Propriétés</a></li>
+    <li><a href="#properties">Propriétés</a></li>
     <li><a href="#how">Services</a></li>
     <li><a href="#blog">Blog</a></li>
   </ul>
@@ -959,7 +1053,7 @@
 <!-- MOBILE MENU -->
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="#about" class="mobile-nav-link">À propos</a>
-  <a href="proprietes.html" class="mobile-nav-link">Propriétés</a>
+  <a href="#properties" class="mobile-nav-link">Propriétés</a>
   <a href="#how" class="mobile-nav-link">Services</a>
   <a href="#blog" class="mobile-nav-link">Blog</a>
 </div>
@@ -972,7 +1066,7 @@
     </h1>
     <p class="hero-sub">Découvrez une collection soigneusement sélectionnée de propriétés d’exception à louer au Congo Brazzaville, pensée pour répondre à vos besoins de confort, de sécurité et de standing.</p>
     <div class="hero-ctas">
-      <a href="proprietes.html" class="btn-primary">
+      <a href="#properties" class="btn-primary">
         Découvrir maintenant
         <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -987,7 +1081,7 @@
   <div class="hero-image">
     <img src="50.jpg" alt="Maison de luxe">
     <div class="hero-badge">
-      <div class="badge-num">850<span style="color:var(--accent)">+</span></div>
+      <div class="badge-num">10<span style="color:var(--accent)">+</span></div>
       <div class="badge-label">Propriétés disponibles</div>
     </div>
   </div>
@@ -1007,8 +1101,9 @@
           <option value="Pointe-Noire">Pointe-Noire, Congo</option>
           <option value="Dolisie">Dolisie, Congo</option>
           <option value="Impfondo">Impfondo, Congo</option>
-          <option value="Paris">Paris, France</option>
-          <option value="Lyon">Lyon, France</option>
+          <option value="Impfondo">Gamboma, Congo</option>
+          <option value="Oyo">Oyo, Congo</option>
+          <option value="Ouesso">Ouesso, Congo</option>
         </select>
       </div>
     </div>
@@ -1097,7 +1192,7 @@
   <div class="cities-slider-wrap">
     <div class="cities-track" id="citiesTrack">
       <a href="#" class="city-card">
-        <img class="city-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=80" alt="Maison à louer Brazzaville" loading="lazy">
+        <img class="city-img" src="1.jpg" alt="Maison à louer Brazzaville" loading="lazy">
         <div class="city-overlay"><span class="city-name">Brazzaville</span><span class="city-count">Centre-ville · Plateau</span></div>
       </a>
       <a href="#" class="city-card">
@@ -1271,7 +1366,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question">
-        Comment fonctionne la recherche de logement avec DreamHomes ?
+        Comment fonctionne la recherche de logement avec Maison de rêve ?
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-answer">
@@ -1298,7 +1393,7 @@
     </div>
     <div class="faq-item">
       <button class="faq-question">
-        Comment contacter un conseiller DreamHomes ?
+        Comment contacter un conseiller Maison de rêve ?
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-answer">
@@ -1378,7 +1473,7 @@
       <h4>Navigation</h4>
       <ul>
         <li><a href="#about">À propos</a></li>
-        <li><a href="proprietes.html">Propriétés</a></li>
+        <li><a href="#properties">Propriétés</a></li>
         <li><a href="#how">Services</a></li>
         <li><a href="#blog">Blog</a></li>
       </ul>
@@ -1399,7 +1494,7 @@
       <ul>
         <li><a href="#">Brazzaville, Congo</a></li>
         <li><a href="tel:+242068652120">+242 06 865 21 20</a></li>
-        <li><a href="#">mpouckaffaires@gmail.com</span></a></li>
+        <li><a href="#"><span class="__cf_email__" data-cfemail="462b362933252d272020272f34233506212b272f2a6825292b">[email&#160;protected]</span></span></a></li>
         <li><a href="#">Lun–Sam : 8h–18h</a></li>
       </ul>
     </div>
@@ -1411,51 +1506,216 @@
 </footer>
 
 
+<!-- PROPERTY DETAIL MODAL -->
+<div class="modal-overlay" id="propModal">
+  <div class="modal-detail" id="modalContent"></div>
+</div>
+
 <!-- BACK TO TOP -->
 <button class="back-top" id="backTop">
   <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
 </button>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('DOMContentLoaded', function() {
 
 var properties = [
-  { id:1, name:'Villa Prestige Corniche', loc:'Brazzaville, Plateau des 15 ans', price:'1 200 000', unit:'FCFA/mois', type:'luxury', badge:'Luxe', img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80', beds:5, baths:3, area:420, visitLink:'' },
-  { id:2, name:'Appartement Central', loc:'Brazzaville, Centre-ville', price:'180 000', unit:'FCFA/mois', type:'rent', badge:'Location', img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80', beds:3, baths:2, area:115, visitLink:'' },
-  { id:3, name:'Maison Familiale Makelekele', loc:'Brazzaville, Makelekele', price:'8 500 000', unit:'FCFA', type:'sale', badge:'Vente', img:'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80', beds:4, baths:2, area:220, visitLink:'' },
-  { id:4, name:'Studio Moderne Poto-Poto', loc:'Brazzaville, Poto-Poto', price:'75 000', unit:'FCFA/mois', type:'rent', badge:'Location', img:'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80', beds:1, baths:1, area:48, visitLink:'' },
-  { id:5, name:'Villa Bord de mer', loc:'Pointe-Noire, Cote Sauvage', price:'2 500 000', unit:'FCFA/mois', type:'luxury', badge:'Luxe', img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80', beds:6, baths:4, area:580, visitLink:'' },
-  { id:6, name:'Duplex Bacongo', loc:'Brazzaville, Bacongo', price:'12 000 000', unit:'FCFA', type:'sale', badge:'Vente', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80', beds:3, baths:2, area:160, visitLink:'' }
+  {
+    id: 1, name: 'Villa Prestige Corniche', loc: 'Brazzaville, Plateau des 15 ans',
+    price: 1200000, unit: 'FCFA/mois', type: 'luxury', category: 'villa', badge: 'Luxe',
+    img: '1.jpg',
+    beds: 5, baths: 3, area: 420,
+    amenities: ['Piscine', 'Gardien 24h', 'Garage 2 voitures', 'Climatisation', 'Groupe électrogène', 'Jardin'],
+    desc: 'Somptueuse villa de prestige sur le Plateau des 15 ans offrant une vue imprenable sur la ville. Architecture contemporaine, finitions haut de gamme et grand jardin arboré. Idéale pour familles expatriées ou diplomates.'
+  },
+  {
+    id: 2, name: 'Appartement Central', loc: 'Brazzaville, Centre-ville',
+    price: 180000, unit: 'FCFA/mois', type: 'rent', category: 'appartement', badge: 'Location',
+    img: '4.jpg',
+    beds: 3, baths: 2, area: 115,
+    amenities: ['Climatisation', 'Parking', 'Gardien', 'Balcon'],
+    desc: 'Bel appartement moderne au cœur de Brazzaville. Lumineux, bien agencé avec cuisine équipée et salon spacieux. Proche de toutes commodités, commerces et administrations.'
+  },
+  {
+    id: 3, name: 'Maison Familiale Makelekele', loc: 'Brazzaville, Makelekele',
+    price: 8500000, unit: 'FCFA', type: 'sale', category: 'maison', badge: 'Vente',
+    img: '60.jpg',
+    beds: 4, baths: 2, area: 220,
+    amenities: ['Garage', 'Jardin', 'Groupe électrogène', 'Puits'],
+    desc: 'Grande maison familiale à vendre dans le quartier résidentiel de Makelekele. Terrain clôturé, belle cour intérieure et espace de stationnement. Titre foncier disponible.'
+  },
+  {
+    id: 4, name: 'Studio Moderne Poto-Poto', loc: 'Brazzaville, Poto-Poto',
+    price: 75000, unit: 'FCFA/mois', type: 'rent', category: 'studio', badge: 'Location',
+    img: '60.jpg',
+    beds: 1, baths: 1, area: 48,
+    amenities: ['Meublé', 'Wifi', 'Eau courante', 'Électricité'],
+    desc: 'Studio entièrement meublé et équipé dans le dynamique quartier de Poto-Poto. Idéal pour un professionnel ou un étudiant. Eau et électricité comprises dans le loyer.'
+  },
+  {
+    id: 5, name: 'Villa Bord de Mer', loc: 'Pointe-Noire, Côte Sauvage',
+    price: 2500000, unit: 'FCFA/mois', type: 'luxury', category: 'villa', badge: 'Luxe',
+    img: '10.png',
+    beds: 6, baths: 4, area: 580,
+    amenities: ['Piscine', 'Vue mer', 'Plage privée', 'Climatisation', 'Gardien', 'Garage', 'Groupe électrogène'],
+    desc: 'Exceptionnelle villa pieds dans l\'eau sur la Côte Sauvage à Pointe-Noire. Vue panoramique sur l\'Océan Atlantique, plage privée et piscine à débordement. Le summum du luxe au Congo.'
+  },
+  {
+    id: 6, name: 'Duplex Bacongo', loc: 'Brazzaville, Bacongo',
+    price: 12000000, unit: 'FCFA', type: 'sale', category: 'duplex', badge: 'Vente',
+    img: '40.jpg',
+    beds: 3, baths: 2, area: 160,
+    amenities: ['Deux niveaux', 'Terrasse', 'Parking', 'Proche école'],
+    desc: 'Duplex contemporain à vendre à Bacongo. Distribution sur deux niveaux avec séjour en double hauteur, trois chambres spacieuses et terrasse au dernier étage. Idéal pour investissement locatif.'
+  }
 ];
 
+// Images supplémentaires par propriété
+var propImagesIdx = {
+  1: ['1.jpg','2.jpg','3.jpg'],
+  
+  2: ['4.jpg','5.jpg','6.jpg'],
+  
+  3: ['1.jpg','5.jpg','4.jpg'],
+  
+  4: ['1.jpg','5.jpg','4.jpg'],
+  
+  5: ['1.jpg','5.jpg','4.jpg'],
+  
+  6: ['1.jpg','5.jpg','4.jpg'],
+  
+};
+
 var testimonials = [
-  { text: "DreamHomes a transforme notre recherche immobiliere. Nous avons trouve notre villa ideale en moins de deux semaines. Service exceptionnel !", name: 'Marie K.', role: 'Cliente a Brazzaville', init: 'MK' },
+  { text: "Maison de rêve 🇨🇬 a transforme notre recherche immobiliere. Nous avons trouve notre villa ideale en moins de deux semaines. Service exceptionnel !", name: 'Marie K.', role: 'Cliente a Brazzaville', init: 'MK' },
+  
   { text: "Une equipe professionnelle et a l'ecoute. Le processus d'achat a ete fluide et transparent du debut a la fin. Je recommande vivement.", name: 'Patrick N.', role: 'Proprietaire a Pointe-Noire', init: 'PN' },
-  { text: "J'avais des doutes au depart, mais DreamHomes m'a guide a chaque etape. Mon appartement de reve est maintenant une realite.", name: 'Sophie L.', role: 'Locataire a Poto-Poto', init: 'SL' },
+  
+  { text: "J'avais des doutes au depart, mais Maison de rêve 🇨🇬 m'a guide a chaque etape. Mon appartement de reve est maintenant une realite.", name: 'Sophie L.', role: 'Locataire a Poto-Poto', init: 'SL' },
+  
   { text: "Excellent accompagnement pour mon investissement locatif. L'equipe connait parfaitement le marche immobilier congolais.", name: 'Jean-Pierre M.', role: 'Investisseur', init: 'JP' },
+  
   { text: "Le site est facile a utiliser et les annonces sont tres detaillees. J'ai pu faire ma selection avant meme de rencontrer le conseiller.", name: 'Adele F.', role: 'Cliente a Brazzaville', init: 'AF' },
+  
   { text: "Service 5 etoiles ! Reactif, professionnel, et surtout honnete sur les prix du marche. Une agence en qui on peut avoir confiance.", name: 'Thomas B.', role: 'Client a Dolisie', init: 'TB' }
 ];
 
+// ─── CAROUSEL STATE ───
+var carouselIndex = 0;
+var carouselImages = [];
+
+function carouselGo(idx) {
+  var n = carouselImages.length;
+  carouselIndex = (idx + n) % n;
+  var track = document.getElementById('carouselTrack');
+  var counter = document.getElementById('carouselCounter');
+  var dots = document.querySelectorAll('.carousel-dot');
+  if (track) track.style.transform = 'translateX(-' + (carouselIndex * 100) + '%)';
+  if (counter) counter.textContent = (carouselIndex + 1) + ' / ' + n;
+  dots.forEach(function(d, i) { d.classList.toggle('active', i === carouselIndex); });
+}
+
+function openModal(id) {
+  var p = properties.find(function(x){ return x.id === id; });
+  if (!p) return;
+
+  carouselImages = propImagesIdx[p.id] || [p.img];
+  carouselIndex = 0;
+
+  var badgeClass = p.type === 'sale' ? 'sale' : '';
+  var priceFormatted = p.price.toLocaleString('fr-FR');
+  var bedsRow = p.beds > 0 ? '<div class="modal-feat"><div class="modal-feat-icon">🛏</div><div class="modal-feat-val">' + p.beds + '</div><div class="modal-feat-label">Chambre' + (p.beds > 1 ? 's' : '') + '</div></div>' : '';
+  var bathsRow = p.baths > 0 ? '<div class="modal-feat"><div class="modal-feat-icon">🚿</div><div class="modal-feat-val">' + p.baths + '</div><div class="modal-feat-label">Salle' + (p.baths > 1 ? 's' : '') + ' de bain</div></div>' : '';
+
+  var slides = carouselImages.map(function(url) {
+    return '<div class="carousel-slide"><img src="' + url + '" alt="' + p.name + '" loading="lazy"></div>';
+  }).join('');
+  var dots = carouselImages.map(function(_, i) {
+    return '<button class="carousel-dot' + (i === 0 ? ' active' : '') + '" data-dot="' + i + '"></button>';
+  }).join('');
+
+  var content =
+    '<button class="modal-close" id="closeModal">✕</button>' +
+    '<div class="modal-carousel">' +
+      '<div class="carousel-track" id="carouselTrack">' + slides + '</div>' +
+      (carouselImages.length > 1
+        ? '<button class="carousel-arrow carousel-prev" id="carouselPrev"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>' +
+          '<button class="carousel-arrow carousel-next" id="carouselNext"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>' +
+          '<div class="carousel-dots">' + dots + '</div>' +
+          '<div class="carousel-counter" id="carouselCounter">1 / ' + carouselImages.length + '</div>'
+        : '') +
+    '</div>' +
+    '<div class="modal-body">' +
+      '<span class="modal-badge ' + badgeClass + '">' + p.badge + '</span>' +
+      '<div class="modal-price">' + priceFormatted + ' <small>' + p.unit + '</small></div>' +
+      '<div class="modal-name">' + p.name + '</div>' +
+      '<div class="modal-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> ' + p.loc + '</div>' +
+      '<div class="modal-feats">' + bedsRow + bathsRow +
+        '<div class="modal-feat"><div class="modal-feat-icon">📐</div><div class="modal-feat-val">' + p.area + '</div><div class="modal-feat-label">m² surface</div></div>' +
+      '</div>' +
+      '<p class="modal-desc">' + p.desc + '</p>' +
+      '<div class="modal-amenities"><h4>Équipements & services</h4><div class="amenity-list">' +
+        p.amenities.map(function(a){ return '<span class="amenity-tag">' + a + '</span>'; }).join('') +
+      '</div></div>' +
+      '<div class="modal-actions">' +
+        '<a href="tel:+242068652120" class="modal-btn-primary"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Réserver maintenant</a>' +
+        '<a href="https://wa.me/242068652120?text=Bonjour, je suis intéressé par : ' + encodeURIComponent(p.name) + '" class="modal-btn-secondary" target="_blank"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>' +
+      '</div>' +
+    '</div>';
+
+  document.getElementById('modalContent').innerHTML = content;
+  document.getElementById('propModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  document.getElementById('closeModal').addEventListener('click', closeModal);
+
+  var startX = 0;
+  var carousel = document.querySelector('.modal-carousel');
+  if (carousel) {
+    carousel.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', function(e){
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) carouselGo(diff > 0 ? carouselIndex + 1 : carouselIndex - 1);
+    });
+  }
+  var prevBtn = document.getElementById('carouselPrev');
+  var nextBtn = document.getElementById('carouselNext');
+  if (prevBtn) prevBtn.addEventListener('click', function(e){ e.stopPropagation(); carouselGo(carouselIndex - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function(e){ e.stopPropagation(); carouselGo(carouselIndex + 1); });
+  document.querySelectorAll('.carousel-dot').forEach(function(dot) {
+    dot.addEventListener('click', function(e){ e.stopPropagation(); carouselGo(parseInt(dot.getAttribute('data-dot'))); });
+  });
+}
+
+function closeModal() {
+  document.getElementById('propModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('propModal').addEventListener('click', function(e){
+  if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
 function propCard(p) {
-  var visitBtn = '<a href="' + (p.visitLink || '#') + '" class="prop-visit-btn" ' + (p.visitLink ? 'target="_blank"' : 'onclick="return false;"') + '>' +
-    '<svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> Visiter</a>';
-  return '<div class="prop-card">' +
+  var badgeClass = p.type === 'sale' ? 'sale' : (p.type === 'luxury' ? 'luxury' : '');
+  var priceFormatted = p.price.toLocaleString('fr-FR');
+  var bedsDisplay = p.beds > 0 ? '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.beds + ' ch.</div>' : '';
+  var bathsDisplay = p.baths > 0 ? '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.baths + ' sdb</div>' : '';
+  return '<div class="prop-card" data-id="' + p.id + '">' +
     '<div class="prop-img">' +
       '<img class="prop-img-bg" src="' + p.img + '" alt="' + p.name + '" loading="lazy">' +
-      '<span class="prop-badge' + (p.type === 'sale' ? ' sale' : '') + '">' + p.badge + '</span>' +
+      '<span class="prop-badge ' + badgeClass + '">' + p.badge + '</span>' +
       '<button class="prop-fav" title="Favoris"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>' +
     '</div>' +
     '<div class="prop-body">' +
-      '<div class="prop-price">' + p.price + ' <small>' + p.unit + '</small></div>' +
+      '<div class="prop-price">' + priceFormatted + ' <small>' + p.unit + '</small></div>' +
       '<h2 class="prop-name">' + p.name + '</h2>' +
       '<div class="prop-loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> ' + p.loc + '</div>' +
-      '<div class="prop-features">' +
-        '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.beds + ' ch.</div>' +
-        '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.baths + ' sdb</div>' +
+      '<div class="prop-features">' + bedsDisplay + bathsDisplay +
         '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm0 16h18v2H3zm2-4h14v2H5zm0-4h14v2H5z"/></svg>' + p.area + ' m²</div>' +
       '</div>' +
-      visitBtn +
+      '<button class="prop-visit-btn" data-open="' + p.id + '"><svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> Voir les détails</button>' +
     '</div>' +
   '</div>';
 }
@@ -1476,6 +1736,10 @@ function renderTestimonials() {
   }).join('');
 }
 
+// ─── INIT ───
+renderProps('all');
+renderTestimonials();
+
 // Tabs
 document.querySelectorAll('.tab-btn').forEach(function(btn) {
   btn.addEventListener('click', function() {
@@ -1483,6 +1747,14 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
     btn.classList.add('active');
     renderProps(btn.getAttribute('data-filter'));
   });
+});
+
+// Open prop modal on card button click
+document.addEventListener('click', function(e) {
+  var openBtn = e.target.closest('[data-open]');
+  if (openBtn && document.getElementById('propModal')) {
+    openModal(parseInt(openBtn.getAttribute('data-open')));
+  }
 });
 
 // Scroll effects
@@ -1633,19 +1905,16 @@ if (searchBtn) {
 
       // Price filter
       if (priceVal) {
-        var priceNum = parseInt(p.price.replace(/\s/g, ''), 10);
+        var priceNum = p.price;
         if (priceVal.indexOf('sale-') === 0) {
-          // Vente ranges
-          var maxSale = parseInt(priceVal.replace('sale-', ''), 10);
-          if (p.unit.indexOf('/mois') !== -1) return false; // exclude rentals
+          if (p.unit.indexOf('/mois') !== -1) return false;
           if (priceVal === 'sale-5000000' && priceNum >= 5000000) return false;
           if (priceVal === 'sale-20000000' && (priceNum < 5000000 || priceNum > 20000000)) return false;
         } else {
-          // Location ranges
           var parts = priceVal.split('-');
           var minP = parseInt(parts[0], 10);
           var maxP = parseInt(parts[1], 10);
-          if (p.unit.indexOf('/mois') === -1) return false; // exclude sales
+          if (p.unit.indexOf('/mois') === -1) return false;
           if (priceNum < minP || priceNum > maxP) return false;
         }
       }
@@ -1655,7 +1924,7 @@ if (searchBtn) {
     // Render filtered results
     var grid = document.getElementById('propsGrid');
     if (filtered.length === 0) {
-      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--gray-500);font-size:.95rem;">Aucune propriété ne correspond à votre recherche. <br><a href="#" onclick="renderProps();return false;" style="color:var(--accent);text-decoration:none;font-weight:500;">Voir toutes les propriétés</a></div>';
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--gray-500);font-size:.95rem;">Aucune propriété ne correspond à votre recherche. <br><a href="propriete.html" onclick="renderProps();return false;" style="color:var(--accent);text-decoration:none;font-weight:500;">Voir toutes les propriétés</a></div>';
     } else {
       grid.innerHTML = filtered.map(propCard).join('');
     }
@@ -1697,16 +1966,12 @@ if (bt2) bt2.addEventListener('click', function() { window.scrollTo({ top: 0, be
 document.addEventListener('click', function(e) {
   var btn = e.target.closest('.prop-fav');
   if (!btn) return;
+  btn.classList.toggle('liked');
   var svg = btn.querySelector('svg');
-  var active = btn.dataset.active === 'true';
-  btn.dataset.active = String(!active);
-  svg.style.fill = !active ? '#c9a96e' : '#c8c4bc';
+  if (svg) svg.style.fill = btn.classList.contains('liked') ? '#e55' : '';
 });
 
-renderProps();
-renderTestimonials();
-
-});
+}); // end DOMContentLoaded
 </script>
 </body>
 </html>

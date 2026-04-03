@@ -312,7 +312,7 @@
     background: var(--white); border-radius: var(--radius);
     overflow: hidden; cursor: pointer;
     transition: transform .3s ease, box-shadow .3s ease;
-    box-shadow: 0 4px 20px rgba(13,13,13,.04);
+    box-shadow: 0 14px 34px rgba(13,13,13,.08);
     border: 1px solid rgba(201,169,110,.06);
     animation: fadeUp .4s ease both;
   }
@@ -360,14 +360,33 @@
   }
   .prop-loc svg { fill: var(--accent); flex-shrink: 0; }
   .prop-features {
-    display: flex; gap: 14px; padding-top: 14px;
-    border-top: 1px solid var(--gray-100); margin-bottom: 14px;
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee7dd;
+    margin-bottom: 16px;
+    margin-top: 2px;
+    flex-wrap: wrap;
   }
+
   .prop-feat {
-    display: flex; align-items: center; gap: 5px;
-    font-size: .78rem; color: var(--gray-500); font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: .78rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    background: #f8f5ef;
+    padding: 10px 14px;
+    border-radius: 999px;
+    min-width: 64px;
+    text-align: center;
+    line-height: 1.3;
   }
-  .prop-feat svg { width: 14px; height: 14px; fill: var(--gray-300); }
+
+  .prop-feat svg { width: 16px; height: 16px; fill: var(--gray-500); }
   .prop-visit-btn {
     display: flex; align-items: center; justify-content: center; gap: 7px;
     width: 100%; padding: 11px;
@@ -793,6 +812,181 @@
     .filter-chip { padding: 6px 10px; font-size: .75rem; }
     .sidebar-apply { font-size: .8rem; }
   }
+  
+  /* ─── SEO CONTENT SECTION ─── */
+.seo-content-section {
+  padding: 80px 60px;
+  background: var(--white);
+}
+
+.seo-content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.seo-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.seo-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.seo-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--black);
+  max-width: 900px;
+}
+
+.seo-intro,
+.seo-content-container p {
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.95;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.seo-block-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.seo-block {
+  background: var(--cream);
+  border: 1px solid rgba(201,169,110,.12);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.seo-block h3,
+.seo-highlight h3,
+.seo-listing-ideas h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+
+.seo-block p {
+  margin-bottom: 14px;
+}
+
+.seo-highlight {
+  margin: 50px 0 40px;
+  padding: 34px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--cream), #fbf8f2);
+  border: 1px solid rgba(201,169,110,.14);
+}
+
+.seo-listing-ideas {
+  margin: 40px 0;
+  padding: 34px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  box-shadow: 0 10px 30px rgba(13,13,13,.04);
+}
+
+.seo-listing-ideas ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 28px;
+  padding: 0;
+  margin-top: 18px;
+}
+
+.seo-listing-ideas li {
+  position: relative;
+  padding-left: 22px;
+  font-size: .96rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.seo-listing-ideas li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.seo-conclusion {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.95;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .seo-content-section {
+    padding: 60px 24px;
+  }
+
+  .seo-block-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-listing-ideas ul {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-block,
+  .seo-highlight,
+  .seo-listing-ideas {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .seo-content-section {
+    padding: 48px 16px;
+  }
+
+  .seo-title {
+    font-size: 2rem;
+  }
+
+  .seo-block h3,
+  .seo-highlight h3,
+  .seo-listing-ideas h3 {
+    font-size: 1.35rem;
+  }
+
+  .seo-intro,
+  .seo-content-container p,
+  .seo-conclusion,
+  .seo-listing-ideas li {
+    font-size: .95rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -985,6 +1179,95 @@
     <a href="https://wa.me/242068652120" class="btn-outline" target="_blank">WhatsApp</a>
   </div>
 </section>
+<!-- SEO CONTENT SECTION -->
+<section class="seo-content-section">
+  <div class="seo-content-container">
+    <p class="seo-eyebrow">Immobilier au Congo</p>
+    <h2 class="seo-title">Trouvez facilement une maison, un appartement ou une villa à louer au Congo Brazzaville</h2>
+
+    <p class="seo-intro">
+      Vous recherchez une <strong>maison à louer au Congo Brazzaville</strong>, un <strong>appartement moderne à Brazzaville</strong>, un <strong>studio meublé</strong>, une <strong>villa familiale</strong> ou encore un <strong>duplex haut standing</strong> ? Cette page a été pensée pour vous aider à explorer une sélection variée de biens immobiliers disponibles selon vos besoins, votre budget et votre zone de recherche. Que vous soyez à la recherche d’un logement pour votre famille, d’un espace professionnel, d’un investissement ou d’une résidence confortable dans un quartier calme, notre catalogue regroupe plusieurs options adaptées à différents profils.
+    </p>
+
+    <p>
+      Le marché de l’<strong>immobilier au Congo Brazzaville</strong> évolue rapidement, notamment dans des zones très recherchées comme <strong>Brazzaville</strong>, <strong>Pointe-Noire</strong>, <strong>Bacongo</strong>, <strong>Moungali</strong>, <strong>Poto-Poto</strong>, <strong>Makelekele</strong> ou encore le <strong>Plateau des 15 ans</strong>. Selon vos préférences, vous pouvez trouver des logements simples et accessibles, des appartements modernes, des villas spacieuses avec jardin, des duplex élégants ou encore des maisons entièrement meublées prêtes à habiter.
+    </p>
+
+    <div class="seo-block-grid">
+
+      <div class="seo-block">
+        <h3>Des appartements à louer pour tous les profils</h3>
+        <p>
+          Si vous cherchez un <strong>appartement à louer à Brazzaville</strong>, vous pouvez trouver plusieurs types de biens selon votre mode de vie. Un jeune actif peut préférer un <strong>studio meublé</strong> ou un <strong>petit appartement pratique</strong> proche des transports et des zones animées, tandis qu’un couple ou une petite famille cherchera plutôt un <strong>appartement de deux ou trois chambres</strong> dans un quartier plus résidentiel.
+        </p>
+        <p>
+          Certains appartements sont recherchés pour leur emplacement, d’autres pour leur confort : balcon, parking, groupe électrogène, gardiennage, climatisation, cuisine équipée, eau disponible ou proximité des commerces. Ce sont des critères très importants pour de nombreux locataires au Congo. En ajoutant régulièrement des biens variés à votre page, vous augmentez vos chances de répondre à des recherches précises sur Google.
+        </p>
+      </div>
+
+      <div class="seo-block">
+        <h3>Maisons à louer au Congo : confort, espace et tranquillité</h3>
+        <p>
+          Beaucoup de personnes recherchent aujourd’hui une <strong>maison à louer au Congo</strong> pour bénéficier de plus d’espace, de calme et d’intimité. Une maison est souvent idéale pour les familles, les personnes travaillant à domicile, ou encore ceux qui souhaitent un environnement plus serein que celui d’un immeuble classique.
+        </p>
+        <p>
+          Les maisons disponibles à la location peuvent proposer plusieurs avantages : grande cour, chambres spacieuses, cuisine indépendante, terrasse, clôture sécurisée, dépendance, garage, espace de jeux pour enfants ou jardin. Ce type de bien attire fortement les familles et les expatriés qui recherchent un cadre de vie plus confortable et plus stable à Brazzaville ou dans d’autres villes du Congo.
+        </p>
+      </div>
+
+      <div class="seo-block">
+        <h3>Villas et duplex : des biens premium très recherchés</h3>
+        <p>
+          Les <strong>villas à louer à Brazzaville</strong> et les <strong>duplex modernes</strong> séduisent particulièrement les clients à la recherche d’un standing supérieur. Ce sont souvent des biens destinés aux familles nombreuses, aux cadres, aux professionnels ou aux personnes souhaitant vivre dans un espace plus raffiné et plus fonctionnel.
+        </p>
+        <p>
+          Une villa ou un duplex peut inclure des équipements haut de gamme comme une piscine, un jardin aménagé, plusieurs salles de bain, des chambres avec dressing, une grande terrasse, un espace bureau, une cour pavée ou un système de sécurité renforcé. Ce type de contenu est excellent pour enrichir votre page et la positionner sur des requêtes plus premium comme <strong>villa de luxe à louer au Congo</strong> ou <strong>duplex haut standing à Brazzaville</strong>.
+        </p>
+      </div>
+
+      <div class="seo-block">
+        <h3>Studios, petits logements et solutions abordables</h3>
+        <p>
+          Tous les visiteurs ne recherchent pas forcément une grande maison ou une villa. Beaucoup souhaitent simplement un <strong>studio à louer à Brazzaville</strong>, une <strong>chambre indépendante</strong> ou un <strong>petit logement bien situé</strong>. Ce type de bien intéresse particulièrement les étudiants, les célibataires, les jeunes travailleurs ou les personnes en transition professionnelle.
+        </p>
+        <p>
+          Ajouter ce type de texte dans votre page permet de couvrir davantage de recherches locales. Vous pouvez par exemple mettre en avant des studios meublés, des logements proches des universités, des appartements économiques ou des résidences pratiques pour les courts et moyens séjours. Cela élargit la portée SEO de votre page tout en montrant que vous proposez des solutions adaptées à tous les budgets.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="seo-highlight">
+      <h3>Pourquoi consulter plusieurs types de propriétés avant de choisir ?</h3>
+      <p>
+        Lorsqu’on cherche un logement au Congo Brazzaville, il est souvent utile de comparer plusieurs catégories de biens avant de prendre une décision. Une personne qui pense vouloir un appartement peut finalement préférer une petite maison avec cour. À l’inverse, quelqu’un qui visait une villa peut découvrir qu’un duplex moderne répond mieux à ses besoins. C’est pour cela qu’une page de propriétés bien conçue doit présenter une diversité de biens : appartements, maisons, villas, studios, duplex, bureaux ou terrains.
+      </p>
+      <p>
+        En tant que visiteur, cela vous permet de mieux visualiser les opportunités disponibles selon votre budget, votre localisation préférée et votre style de vie. En tant que propriétaire de site, cela vous permet d’avoir plus de contenu, plus de mots-clés, plus de pages pertinentes et une meilleure visibilité dans les résultats de recherche.
+      </p>
+    </div>
+
+    <div class="seo-listing-ideas">
+      <h3>Exemples de biens que vous pouvez mettre en avant sur cette page</h3>
+      <ul>
+        <li>Appartement 2 chambres à louer à Brazzaville avec balcon et parking</li>
+        <li>Studio meublé à louer à Moungali pour étudiant ou jeune actif</li>
+        <li>Maison familiale à louer à Bacongo avec cour et garage</li>
+        <li>Villa moderne à louer au Plateau des 15 ans avec jardin</li>
+        <li>Duplex haut standing à louer à Pointe-Noire avec climatisation</li>
+        <li>Appartement de luxe avec gardien et groupe électrogène</li>
+        <li>Maison basse à louer à Makelekele dans un quartier calme</li>
+        <li>Studio pratique proche du centre-ville pour court ou long séjour</li>
+        <li>Maison meublée à louer pour expatriés ou professionnels</li>
+        <li>Appartement économique avec eau et électricité disponibles</li>
+      </ul>
+    </div>
+
+    <p class="seo-conclusion">
+      Que vous recherchiez une <strong>maison à louer au Congo Brazzaville</strong>, un <strong>appartement bien situé</strong>, une <strong>villa confortable</strong>, un <strong>studio accessible</strong> ou un <strong>duplex premium</strong>, cette page a pour objectif de vous offrir une vue claire et inspirante des possibilités disponibles. Prenez le temps d’explorer les annonces, de comparer les quartiers, d’évaluer les équipements et de choisir le bien qui correspond vraiment à vos attentes.
+    </p>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -1028,7 +1311,7 @@
       <ul>
         <li><a href="#">Brazzaville, Congo</a></li>
         <li><a href="#">+242 06 865 21 20</a></li>
-        <li><a href="#">mpouckaffaires@gmail.com</a></li>
+        <li><a href="#"><span class="__cf_email__" data-cfemail="c2afb2adb7a1a9a3a4a4a3abb0a7b182a5afa3abaeeca1adaf">[email&#160;protected]</span></a></li>
         <li><a href="#">Lun–Sam : 8h–18h</a></li>
       </ul>
     </div>
@@ -1049,14 +1332,14 @@
   <div class="modal-detail" id="modalContent"></div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ─── PROPERTIES DATA ───
 var properties = [
   {
     id: 1, name: 'Villa Prestige Corniche', loc: 'Brazzaville, Plateau des 15 ans',
     price: 1200000, unit: 'FCFA/mois', type: 'luxury', category: 'villa', badge: 'Luxe',
     img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80',
-    beds: 5, baths: 3, area: 420, visitLink: '',
+    beds: 5, baths: 3, area: 420, visitLink: 'https://mpouckjhochadrack.github.io/',
     amenities: ['Piscine', 'Gardien 24h', 'Garage 2 voitures', 'Climatisation', 'Groupe électrogène', 'Jardin'],
     desc: 'Somptueuse villa de prestige sur le Plateau des 15 ans offrant une vue imprenable sur la ville. Architecture contemporaine, finitions haut de gamme et grand jardin arboré. Idéale pour familles expatriées ou diplomates.'
   },
@@ -1277,7 +1560,7 @@ function renderResults() {
   var pageItems = filteredResults.slice(start, start + ITEMS_PER_PAGE);
 
   if (count === 0) {
-    grid.innerHTML = '<div class="no-results"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><h3>Aucune propriété trouvée</h3><p>Essayez de modifier vos critères de recherche. <br><a href="#" id="clearAll">Voir toutes les propriétés</a></p></div>';
+    grid.innerHTML = '<div class="no-results"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><h3>Aucune propriété trouvée</h3><p>Essayez de modifier vos critères de recherche. <br><a href="proprietes.html" id="clearAll">Voir toutes les propriétés</a></p></div>';
     document.getElementById('pagination').innerHTML = '';
     var ca = document.getElementById('clearAll');
     if (ca) ca.addEventListener('click', function(e){ e.preventDefault(); resetAll(); });
@@ -1644,10 +1927,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Reveal on scroll
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        observer.unobserve(e.target);
+      }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+
+  document.querySelectorAll('.prop-card').forEach(function(card) {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(24px)';
+    card.style.transition = 'opacity .4s ease, transform .4s ease';
+    observer.observe(card);
+  });
 
 });
 </script>
