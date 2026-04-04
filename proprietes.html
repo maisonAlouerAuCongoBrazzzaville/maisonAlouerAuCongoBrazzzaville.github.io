@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -300,11 +301,11 @@
 
   /* ─── PROP CARD ─── */
   .prop-card {
-    background: var(--white); border-radius: var(--radius);
+    background: #ffffff; border-radius: var(--radius);
     overflow: hidden; cursor: pointer;
     transition: transform .3s ease, box-shadow .3s ease;
-    box-shadow: 0 14px 34px rgba(13,13,13,.08);
-    border: 1px solid rgba(201,169,110,.06);
+    box-shadow: 0 4px 24px rgba(13,13,13,.10);
+    border: 1px solid rgba(13,13,13,.07);
     animation: fadeUp .4s ease both;
   }
   .prop-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
@@ -360,33 +361,20 @@
     flex-wrap: wrap;
   }
 
-  .prop-feat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    font-size: .78rem;
-    color: var(--gray-700);
-    font-weight: 400;
-    background: #f8f5ef;
-    padding: 10px 14px;
-    border-radius: 999px;
-    min-width: 64px;
-    text-align: center;
-    line-height: 1.3;
-  }
-
-  .prop-feat svg { width: 16px; height: 16px; fill: var(--gray-500); }
+  .prop-feat { font-size: .78rem; color: var(--gray-500); display: flex; align-items: center; gap: 5px; }
+  .prop-feat svg { fill: var(--gray-300); width: 14px; height: 14px; }
   .prop-visit-btn {
-    display: flex; align-items: center; justify-content: center; gap: 7px;
-    width: 100%; padding: 11px;
-    background: var(--cream); border: 1.5px solid var(--gray-100); border-radius: 50px;
-    font-family: var(--sans); font-size: .8rem; font-weight: 500; color: var(--black);
-    text-decoration: none; cursor: pointer; transition: all .25s;
+    display: inline-flex; align-items: center; gap: 7px;
+    margin-top: 14px; width: 100%;
+    padding: 10px 16px; border-radius: 50px;
+    background: none; border: 1.5px solid var(--accent);
+    color: var(--accent); font-family: var(--sans);
+    font-size: .82rem; font-weight: 500; cursor: pointer;
+    text-decoration: none; justify-content: center;
+    transition: all .22s ease;
   }
-  .prop-visit-btn:hover { background: var(--black); border-color: var(--black); color: white; }
-  .prop-visit-btn svg { width: 14px; height: 14px; fill: currentColor; }
+  .prop-visit-btn:hover { background: var(--accent); color: white; }
+  .prop-visit-btn svg { width: 15px; height: 15px; fill: currentColor; transition: fill .22s; }
 
   /* LIST VIEW CARD */
   .props-grid.list-view .prop-card {
@@ -990,7 +978,7 @@
     <li><a href="proprietes.html" class="active">Propriétés</a></li>
     <li><a href="#">À propos</a></li>
     <li><a href="#">Blog</a></li>
-    <li><a href="#" class="btn-primary" style="padding:10px 22px;font-size:.8rem;">Nous appeler</a></li>
+    <li><a href="#" class="btn-primary" style="padding:10px 22px;font-size:.8rem;color:white;">Nous appeler</a></li>
   </ul>
   <div class="nav-hamburger" id="hamburger">
     <span></span><span></span><span></span>
@@ -1283,7 +1271,8 @@
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="proprietes.html">Propriétés</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#">Blog</a></li
+        <li><a href="#">A propos</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1302,7 +1291,7 @@
       <ul>
         <li><a href="#">Brazzaville, Congo</a></li>
         <li><a href="#">+242 06 865 21 20</a></li>
-        <li><a href="#"><span class="__cf_email__" data-cfemail="c2afb2adb7a1a9a3a4a4a3abb0a7b182a5afa3abaeeca1adaf">[email&#160;protected]</span></a></li>
+        <li><a href="#">mpouckaffaires@gmail.com></a></li>
         <li><a href="#">Lun–Sam : 8h–18h</a></li>
       </ul>
     </div>
@@ -1323,7 +1312,7 @@
   <div class="modal-detail" id="modalContent"></div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ─── PROPERTIES DATA ───
 var properties = [
   {
@@ -1485,7 +1474,7 @@ function propCard(p) {
   var badgeClass = p.type === 'sale' ? 'sale' : (p.type === 'luxury' ? 'luxury' : '');
   var priceFormatted = p.price.toLocaleString('fr-FR');
   var bedsDisplay = p.beds > 0 ? '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.beds + ' ch.</div>' : '';
-  var bathsDisplay = p.baths > 0 ? '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>' + p.baths + ' sdb</div>' : '';
+  var bathsDisplay = p.baths > 0 ? '<div class="prop-feat"><svg viewBox="0 0 24 24"><path d="M7 6c0-1.1.9-2 2-2s2 .9 2 2H7zm-4 5v2h1l1 6h12l1-6h1v-2H3zm15.5 0H5.5C4.1 11 3 9.9 3 8.5V7h2v1.5c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5V7h2v1.5c0 1.4-1.1 2.5-2.5 2.5z"/></svg>' + p.baths + ' sdb</div>' : '';
   return '<div class="prop-card" data-id="' + p.id + '" style="animation-delay:' + (Math.random()*.2).toFixed(2) + 's">' +
     '<div class="prop-img">' +
       '<img class="prop-img-bg" src="' + p.img + '" alt="' + p.name + '" loading="lazy">' +
@@ -1927,13 +1916,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.prop-card').forEach(function(card) {
-    card.style.opacity = '0';
+       card.style.opacity = '0';
     card.style.transform = 'translateY(24px)';
     card.style.transition = 'opacity .4s ease, transform .4s ease';
     observer.observe(card);
   });
 
-});
+}); // end DOMContentLoaded
 </script>
 </body>
 </html>
